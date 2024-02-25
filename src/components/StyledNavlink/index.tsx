@@ -10,7 +10,7 @@ export function StyledNavLink({
   return (
     <NavLink
       {...props}
-      className={`${typeof className === "string" ? className : ""} text-cyan-400 text-xl hover:underline`}
+      className={`${typeof className === "string" ? className : ""} text-md hover:underline`}
     >
       {children}
     </NavLink>

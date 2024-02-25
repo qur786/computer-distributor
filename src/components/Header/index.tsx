@@ -4,10 +4,7 @@ import PlaceholderLogo from "./logo-placeholder.png";
 import { SideBar } from "../SideBar";
 import { StyledNavLink } from "../StyledNavlink";
 import { useState } from "react";
-import {
-  Bars3Icon,
-  MagnifyingGlassCircleIcon,
-} from "@heroicons/react/24/solid";
+import { Bars3Icon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 export function Header(): JSX.Element {
   const [modalOpen, setModalOpen] = useState(false);
@@ -28,7 +25,7 @@ export function Header(): JSX.Element {
         className="h-12 w-28"
         title="Logo"
       />
-      <nav className="hidden gap-6 md:flex">
+      <nav className="hidden gap-8 md:flex">
         {Object.entries(NavLinks).map(([title, link]) => (
           <StyledNavLink to={link} key={title}>
             {title}
@@ -36,19 +33,7 @@ export function Header(): JSX.Element {
         ))}
       </nav>
       <SideBar open={modalOpen} onClose={handleSidebarClose} />
-      <div className="flex items-center justify-between rounded-3xl border border-gray-700 px-2 py-1 outline-2">
-        <input
-          type="text"
-          placeholder="Search..."
-          className="w-4/5 focus:outline-none dark:bg-gray-700 dark:text-white dark:focus:bg-gray-600"
-        />
-        <button
-          title="Search"
-          className="rounded-full opacity-50 hover:opacity-100 active:animate-ping"
-        >
-          <MagnifyingGlassCircleIcon className="h-8 text-cyan-500" />
-        </button>
-      </div>
+      <MagnifyingGlassIcon className="h-6 text-slate-500" />
       <button
         title="Menu"
         onClick={toggleSidebar}

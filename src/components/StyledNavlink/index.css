@@ -1,5 +1,13 @@
-.active {
-  color: cyan;
-  text-decoration: underline;
-  font-weight: bold;
+a.active {
+  font-weight: 500;
+}
+
+a.active::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%; /* To make it a circle */
+  margin-right: 5px; /* Adjust spacing if needed */
 }
