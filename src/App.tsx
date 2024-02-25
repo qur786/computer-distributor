@@ -1,9 +1,10 @@
+import { Header } from "./components/Header";
 import { Outlet } from "react-router-dom";
 
 export function App(): JSX.Element {
   return (
     <div>
-      <header></header>
+      <Header />
       <main>
         <Outlet />
       </main>
