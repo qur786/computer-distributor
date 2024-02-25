@@ -159,6 +159,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@fontsource/barlow@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/barlow/-/barlow-5.0.8.tgz#ab29add7769358c07b183bfee17a1d6798317472"
+  integrity sha512-RMUw8YyoNG3o1rwMnfyyWqYuR7k6H48yYZwpCsgY0x7jeaRdp/FdyG6lPLD5P403kDyqauewldk+VDPhQ65+4w==
+
 "@heroicons/react@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-2.1.1.tgz#422deb80c4d6caf3371aec6f4bee8361a354dc13"

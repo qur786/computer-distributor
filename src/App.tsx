@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 export function App(): JSX.Element {
   return (
-    <div>
+    <div className="font-barlow">
       <Header />
       <main>
         <Outlet />
