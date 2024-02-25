@@ -1,15 +1,15 @@
 {
-  "name": "react-vite-template",
+  "name": "computer-distributor-vite",
   "version": "1.0.0",
   "private": false,
   "description": "A React template generated with vite with prettier, eslint, typescript and tailwind-css features for cross-platform development",
-  "homepage": "https://github.com/qur786/react-vite-template#readme",
+  "homepage": "https://github.com/qur786/computer-distributor-vite#readme",
   "bugs": {
-    "url": "https://github.com/qur786/react-vite-template/issues"
+    "url": "https://github.com/qur786/computer-distributor-vite/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/qur786/react-vite-template.git"
+    "url": "https://github.com/qur786/computer-distributor-vite.git"
   },
   "license": "MIT",
   "author": "Qurban Ahmad <ahmad76qurban@gmail.com>",
