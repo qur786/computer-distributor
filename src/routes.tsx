@@ -1,3 +1,4 @@
+import { AboutUsPage } from "./pages/AboutUs";
 import { App } from "./App";
 import { HomePage } from "./pages/Home";
 import { NavLinks } from "./components/utils";
@@ -11,6 +12,10 @@ export const routes = createBrowserRouter([
       {
         path: NavLinks.Home,
         element: <HomePage />,
+      },
+      {
+        path: NavLinks.About,
+        element: <AboutUsPage />,
       },
     ],
   },
