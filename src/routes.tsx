@@ -1,4 +1,4 @@
-import { AboutUsPage } from "./pages/AboutUs";
+import { AboutUs } from "./code-splits";
 import { App } from "./App";
 import { ContactUsPage } from "./pages/ContactUs";
 import { HomePage } from "./pages/Home";
@@ -17,7 +17,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: NavLinks["About Us"],
-        element: <AboutUsPage />,
+        element: <AboutUs />,
       },
       {
         path: NavLinks.Products,
