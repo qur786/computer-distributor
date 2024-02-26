@@ -1,6 +1,6 @@
 export const NavLinks = {
   Home: "/",
-  About: "/about-us",
+  "About Us": "/about-us",
   Products: "/products",
-  Contact: "/contact-us",
+  "Contact Us": "/contact-us",
 } as const;
