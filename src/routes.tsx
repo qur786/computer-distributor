@@ -1,10 +1,7 @@
-import { AboutUs } from "./code-splits";
 import { App } from "./App";
-import { ContactUsPage } from "./pages/ContactUs";
-import { HomePage } from "./pages/Home";
 import { NavLinks } from "./components/utils";
-import { ProductsPage } from "./pages/Products";
 import { createBrowserRouter } from "react-router-dom";
+import { AboutUs, ContactUs, Home, Products } from "./code-splits";
 
 export const routes = createBrowserRouter([
   {
@@ -13,7 +10,7 @@ export const routes = createBrowserRouter([
     children: [
       {
         path: NavLinks.Home,
-        element: <HomePage />,
+        element: <Home />,
       },
       {
         path: NavLinks["About Us"],
@@ -21,11 +18,11 @@ export const routes = createBrowserRouter([
       },
       {
         path: NavLinks.Products,
-        element: <ProductsPage />,
+        element: <Products />,
       },
       {
         path: NavLinks["Contact Us"],
-        element: <ContactUsPage />,
+        element: <ContactUs />,
       },
     ],
   },
