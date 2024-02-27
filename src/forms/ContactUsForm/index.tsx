@@ -1,12 +1,33 @@
+import type { FormEventHandler } from "react";
 import { Input } from "../../components/Input";
 import { sendContactUsMessage } from "./send-email";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export function ContactUsForm(): JSX.Element {
   const [loading, setLoading] = useState(false);
-  const form = useRef<HTMLFormElement>(null);
+
+  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const form = e.currentTarget; // Needed otherwise the e.currentTarget is getting overrided with null value in async code.
+    // TODO: add notification
+    sendContactUsMessage("#contact-us-form")
+      .then((res) => {
+        console.log(res);
+        form.reset();
+      })
+      .catch(console.log)
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   return (
-    <form className="flex w-full flex-col gap-y-6" ref={form}>
+    <form
+      className="flex w-full flex-col gap-y-6"
+      id="contact-us-form"
+      onSubmit={handleSubmit}
+    >
       <Input
         type="text"
         name="from_name" // Same as template name
@@ -32,22 +53,6 @@ export function ContactUsForm(): JSX.Element {
       <input type="hidden" name="to_name" value="Vishal" />
       <button
         type="submit"
-        onClick={(e) => {
-          e.preventDefault();
-          setLoading(true);
-          // TODO: add notification
-          if (form.current !== null) {
-            sendContactUsMessage(form.current)
-              .then((res) => {
-                console.log(res);
-                form.current?.reset();
-              })
-              .catch(console.log)
-              .finally(() => {
-                setLoading(false);
-              });
-          }
-        }}
         disabled={loading}
         className="w-full rounded-xl bg-black p-2 text-white hover:border-2 hover:bg-white hover:text-black disabled:opacity-50"
       >

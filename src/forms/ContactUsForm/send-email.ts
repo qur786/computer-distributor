@@ -7,9 +7,9 @@ const EmailJS = {
 } as const;
 
 export async function sendContactUsMessage(
-  formElement: HTMLFormElement,
+  htmlElement: string | HTMLFormElement,
 ): Promise<void> {
-  await sendForm(EmailJS.serviceID, EmailJS.templateID, formElement, {
+  await sendForm(EmailJS.serviceID, EmailJS.templateID, htmlElement, {
     publicKey: EmailJS.publicKey,
   });
 }
