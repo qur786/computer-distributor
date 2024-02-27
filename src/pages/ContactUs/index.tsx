@@ -8,8 +8,8 @@ import {
 
 export function ContactUsPage(): JSX.Element {
   return (
-    <main className="flex flex-col-reverse md:px-10 md:flex-row">
-      <section className="flex w-full flex-col items-center gap-y-6 p-10 md:w-1/2">
+    <main className="flex flex-col-reverse md:flex-row gap-12 mt-12">
+      <section className="flex w-full flex-col items-center gap-y-6 md:w-1/2">
         <h2 className="text-3xl font-bold text-center">
           We&apos;re here to help you.
         </h2>
@@ -61,7 +61,7 @@ export function ContactUsPage(): JSX.Element {
           className="w-full"
         />
       </section>
-      <section className="flex w-full flex-col items-center gap-y-6 p-10 md:w-1/2">
+      <section className="flex w-full flex-col items-center gap-y-6 md:w-1/2">
         <h2 className="text-3xl font-bold text-center">
           Do you want to connect?
         </h2>
