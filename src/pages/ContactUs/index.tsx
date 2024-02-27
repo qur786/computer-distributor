@@ -1,4 +1,4 @@
-import { Input } from "../../components/Input";
+import { ContactUsForm } from "../../forms/ContactUsForm";
 import {
   ClockIcon,
   EnvelopeIcon,
@@ -8,7 +8,7 @@ import {
 
 export function ContactUsPage(): JSX.Element {
   return (
-    <main className="flex flex-col-reverse md:px-10 mt-12 md:flex-row">
+    <main className="flex flex-col-reverse md:px-10 md:flex-row">
       <section className="flex w-full flex-col items-center gap-y-6 p-10 md:w-1/2">
         <h2 className="text-3xl font-bold text-center">
           We&apos;re here to help you.
@@ -68,35 +68,7 @@ export function ContactUsPage(): JSX.Element {
         <p className="opacity-75 text-center">
           Let us know how we can help you?
         </p>
-        <form className="flex w-full flex-col gap-y-6">
-          <Input
-            type="text"
-            name="name"
-            label="Name"
-            placeholder="Enter name"
-            required
-          />
-          <Input
-            type="email"
-            name="email"
-            label="Email"
-            placeholder="Enter email ID"
-            required
-          />
-          <Input
-            name="message"
-            label="Message"
-            placeholder="Type your message"
-            textArea={{ rows: 6 }}
-            required
-          />
-          <button
-            type="submit"
-            className="w-full rounded-xl bg-black p-2 text-white hover:border-2 hover:bg-white hover:text-black"
-          >
-            Submit
-          </button>
-        </form>
+        <ContactUsForm />
       </section>
     </main>
   );
