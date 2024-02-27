@@ -18,7 +18,7 @@ export function Header(): JSX.Element {
   };
 
   return (
-    <header className="fixed w-full p-4 dark:bg-gray-800 dark:text-white backdrop-blur-[1px] shadow-lg flex items-center justify-between">
+    <header className="fixed w-full p-4 dark:bg-gray-800 dark:text-white backdrop-blur-md shadow-lg flex items-center justify-between">
       <img
         src={PlaceholderLogo}
         alt="Logo"
