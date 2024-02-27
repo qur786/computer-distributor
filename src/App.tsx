@@ -7,7 +7,7 @@ export function App(): JSX.Element {
   return (
     <div className="font-barlow flex flex-col items-center">
       <Header />
-      <main className="container">
+      <main className="container mt-12">
         <Suspense fallback={<LoadingOverlay />}>
           <Outlet />
         </Suspense>
