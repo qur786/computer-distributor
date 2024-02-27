@@ -68,7 +68,7 @@ export function ContactUsPage(): JSX.Element {
         <p className="opacity-75 text-center">
           Let us know how we can help you?
         </p>
-        <form className="flex w-3/4 flex-col gap-y-6">
+        <form className="flex w-full flex-col gap-y-6">
           <Input
             type="text"
             name="name"
