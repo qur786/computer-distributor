@@ -1,4 +1,4 @@
-import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { ProductCard } from "../../components/ProductCard";
 import { Products } from "./data";
 
@@ -11,7 +11,7 @@ export function ProductsPage(): JSX.Element {
       </h3>
       {/* TODO: add search product logic */}
       <div className="flex flex-row border rounded-xl px-4 py-2 gap-2">
-        <MagnifyingGlassIcon className="h-6" />
+        <MagnifyingGlassIcon className="h-6 text-slate-500" />
         <input
           type="search"
           name="product-search"
