@@ -23,7 +23,7 @@ export function Button({
     >
       <span className="flex flex-row gap-2 justify-center items-center">
         {children}
-        <Loader color={loaderColor} hidden={!loading} />
+        {loading ? <Loader color={loaderColor} /> : undefined}
       </span>
     </button>
   );
