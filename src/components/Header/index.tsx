@@ -1,6 +1,7 @@
 import type { MouseEventHandler } from "react";
 import { NavLinks } from "../utils";
 import PlaceholderLogo from "./logo-placeholder.png";
+import { SearchBar } from "../SearchBar";
 import { SideBar } from "../SideBar";
 import { StyledNavLink } from "../StyledNavlink";
 import { useMatch } from "react-router-dom";
@@ -50,6 +51,7 @@ export function Header(): JSX.Element {
         </span>
       </header>
       <SideBar open={modalOpen} onClose={handleSidebarClose} />
+      <SearchBar />
     </>
   );
 }
