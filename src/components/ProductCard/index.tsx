@@ -1,4 +1,4 @@
-interface ProductCardProps {
+export interface ProductCardProps {
   title: string;
   price: string;
   image: string;
