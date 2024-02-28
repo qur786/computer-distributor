@@ -13,7 +13,7 @@ export function ContactUsPage(): JSX.Element {
         <h2 className="text-3xl font-bold text-center">
           We&apos;re here to help you.
         </h2>
-        <p className="opacity-75 text-center">
+        <p className="text-center">
           Have a question, comment, or brilliant idea you&apos;d like to share?
           Send us a little note below - we love to hear from you and will always
           reply!
@@ -65,9 +65,7 @@ export function ContactUsPage(): JSX.Element {
         <h2 className="text-3xl font-bold text-center">
           Do you want to connect?
         </h2>
-        <p className="opacity-75 text-center">
-          Let us know how we can help you?
-        </p>
+        <p className="text-center">Let us know how we can help you?</p>
         <ContactUsForm />
       </section>
     </main>

@@ -11,7 +11,7 @@ export function SideBar({ onClose, open }: SideBarProps): JSX.Element {
   return (
     <>
       <div
-        className={`fixed left-0 top-0 z-10 h-full w-full bg-gray-900 opacity-60 md:hidden ${
+        className={`fixed left-0 top-0 z-20 h-screen w-screen bg-gray-900 opacity-60 md:hidden ${
           open === true ? "" : "hidden"
         }`}
         onClick={onClose}
