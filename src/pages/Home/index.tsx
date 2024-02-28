@@ -24,7 +24,7 @@ export function HomePage(): JSX.Element {
           />
         </div>
         <div className="h-1/2 md:h-2/6 flex flex-col items-center justify-between">
-          <p className="text-sm font-bold opacity-50 text-center">NEW START</p>
+          <p className="text-sm font-bold text-center">NEW START</p>
           <h5 className="text-[#fa541c] font-semibold text-6xl text-center">
             Computer Distributer
           </h5>
