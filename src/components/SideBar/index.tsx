@@ -29,7 +29,7 @@ export function SideBar({ onClose, open }: SideBarProps): JSX.Element {
             onClick={onClose}
             className="opacity-75 hover:opacity-100"
           >
-            <XMarkIcon className="h-8 text-red-600" />
+            <XMarkIcon className="h-8 text-red-700" />
           </button>
           {Object.entries(NavLinks).map(([title, link]) => (
             <StyledNavLink to={link} key={title} onClick={onClose}>
