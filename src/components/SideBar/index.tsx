@@ -1,6 +1,7 @@
 import { NavLinks } from "../utils";
 import { StyledNavLink } from "../StyledNavlink";
 import { XMarkIcon } from "@heroicons/react/24/solid";
+import { twMerge } from "tailwind-merge";
 
 interface SideBarProps {
   onClose?: () => void;
@@ -11,17 +12,17 @@ export function SideBar({ onClose, open }: SideBarProps): JSX.Element {
   return (
     <>
       <div
-        className={`fixed left-0 top-0 z-20 h-screen w-screen bg-gray-900 opacity-60 md:hidden ${
-          open === true ? "" : "hidden"
-        }`}
+        className={twMerge(
+          "fixed left-0 top-0 z-20 h-screen w-screen bg-gray-900 opacity-60 md:hidden",
+          open ? "" : "hidden",
+        )}
         onClick={onClose}
       />
       <div
-        className={`fixed left-0 top-0 z-20 h-screen bg-white px-16 shadow-2xl md:hidden ${
-          open === true
-            ? "translate-x-0 transition-transform duration-500 ease-linear"
-            : "-translate-x-[500px] transition-transform duration-1000 ease-linear"
-        }`}
+        className={twMerge(
+          "fixed -left-[500px] transition-[left] duration-1000 top-0 z-20 h-screen bg-white px-16 shadow-2xl md:hidden",
+          open === true ? "left-0" : "",
+        )}
       >
         <nav className="relative top-12 flex h-full flex-col items-center justify-start gap-4">
           <button
