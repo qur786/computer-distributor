@@ -26,6 +26,10 @@ export function Header(): JSX.Element {
     setSearchBarOpen(true);
   };
 
+  const handleSearchBarClose = () => {
+    setSearchBarOpen(false);
+  };
+
   return (
     <>
       <header className="fixed w-full p-4 dark:bg-gray-800 dark:text-white backdrop-blur-md shadow-lg flex items-center justify-between">
@@ -59,7 +63,7 @@ export function Header(): JSX.Element {
         </span>
       </header>
       <SideBar open={modalOpen} onClose={handleSidebarClose} />
-      <SearchBar open={searchBarOpen} />
+      <SearchBar open={searchBarOpen} onClose={handleSearchBarClose} />
     </>
   );
 }
