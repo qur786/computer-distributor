@@ -3,11 +3,14 @@ import { NavLinks } from "../utils";
 import PlaceholderLogo from "./logo-placeholder.png";
 import { SideBar } from "../SideBar";
 import { StyledNavLink } from "../StyledNavlink";
+import { useMatch } from "react-router-dom";
 import { useState } from "react";
 import { Bars3Icon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 export function Header(): JSX.Element {
   const [modalOpen, setModalOpen] = useState(false);
+
+  const matchObject = useMatch(NavLinks.Products); // If the current location is the product page
 
   const handleSidebarClose = () => {
     setModalOpen(false);
@@ -34,7 +37,9 @@ export function Header(): JSX.Element {
           ))}
         </nav>
         <span className="flex flex-row gap-4">
-          <MagnifyingGlassIcon className="h-6 text-slate-500" />
+          {matchObject ? (
+            <MagnifyingGlassIcon className="h-6 text-slate-500" />
+          ) : undefined}
           <button
             title="Menu"
             onClick={toggleSidebar}
