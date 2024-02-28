@@ -10,6 +10,7 @@ import { Bars3Icon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 export function Header(): JSX.Element {
   const [modalOpen, setModalOpen] = useState(false);
+  const [searchBarOpen, setSearchBarOpen] = useState(false);
 
   const matchObject = useMatch(NavLinks.Products); // If the current location is the product page
 
@@ -19,6 +20,10 @@ export function Header(): JSX.Element {
 
   const toggleSidebar: MouseEventHandler<HTMLButtonElement> = () => {
     setModalOpen((prev) => !prev);
+  };
+
+  const handleSearchBarOpen = () => {
+    setSearchBarOpen(true);
   };
 
   return (
@@ -39,7 +44,10 @@ export function Header(): JSX.Element {
         </nav>
         <span className="flex flex-row gap-4">
           {matchObject ? (
-            <MagnifyingGlassIcon className="h-6 text-slate-500" />
+            <MagnifyingGlassIcon
+              className="h-6 text-slate-500 cursor-pointer"
+              onClick={handleSearchBarOpen}
+            />
           ) : undefined}
           <button
             title="Menu"
@@ -51,7 +59,7 @@ export function Header(): JSX.Element {
         </span>
       </header>
       <SideBar open={modalOpen} onClose={handleSidebarClose} />
-      <SearchBar />
+      <SearchBar open={searchBarOpen} />
     </>
   );
 }
