@@ -8,6 +8,7 @@ export function ProductsPage(): JSX.Element {
         <span className="text-red-600">Flash Deals,</span> Enjoy Upto 70%
         discounts
       </h3>
+      {/* TODO: add search product logic */}
       <div className="flex flex-row border rounded-xl px-4 py-2 gap-2">
         <MagnifyingGlassIcon className="h-6" />
         <input
