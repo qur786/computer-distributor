@@ -1,5 +1,6 @@
 import type { ComponentProps } from "react";
 import { Loader } from "../Loader";
+import { twMerge } from "tailwind-merge";
 
 interface ButtonProps extends ComponentProps<"button"> {
   loading?: boolean;
@@ -15,7 +16,10 @@ export function Button({
   return (
     <button
       {...props}
-      className="w-full rounded-xl bg-black p-2 text-white hover:border-2 hover:bg-white hover:text-black disabled:opacity-50"
+      className={twMerge(
+        props.className,
+        "w-full rounded-xl bg-black p-2 text-white hover:border-2 hover:bg-white hover:text-black disabled:opacity-50",
+      )}
     >
       <span className="flex flex-row gap-2 justify-center items-center">
         {children}
