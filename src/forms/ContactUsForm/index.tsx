@@ -1,3 +1,4 @@
+import { Button } from "../../components/Button";
 import type { FormEventHandler } from "react";
 import { Input } from "../../components/Input";
 import { sendContactUsMessage } from "./send-email";
@@ -51,13 +52,9 @@ export function ContactUsForm(): JSX.Element {
       />
       {/* Same as template name */}
       <input type="hidden" name="to_name" value="Vishal" />
-      <button
-        type="submit"
-        disabled={loading}
-        className="w-full rounded-xl bg-black p-2 text-white hover:border-2 hover:bg-white hover:text-black disabled:opacity-50"
-      >
+      <Button type="submit" disabled={loading} loading={loading}>
         Submit
-      </button>
+      </Button>
     </form>
   );
 }
