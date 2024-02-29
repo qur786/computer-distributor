@@ -26,7 +26,7 @@ export function ProductsPage(): JSX.Element {
           <ProductCard key={product.title} {...product} />
         ))}
       </div>
-      <Pagination pageLength={10} currentPage={4} />
+      <Pagination pageLength={10} />
     </div>
   );
 }
