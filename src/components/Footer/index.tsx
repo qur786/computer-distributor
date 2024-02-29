@@ -14,7 +14,7 @@ export function Footer(): JSX.Element {
             <ul className="flex flex-col items-center md:items-start">
               <li className="flex flex-row items-start gap-2">
                 <MapPinIcon className="h-4" />
-                Post office chaibasa Chaibasa,
+                Post office Chaibasa,
                 <br />
                 Jharkhand 833201 India
               </li>
