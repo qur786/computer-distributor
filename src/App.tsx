@@ -10,6 +10,7 @@ export function App(): JSX.Element {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
+
   return (
     <div className="font-barlow flex flex-col items-center gap-8 dark:bg-[#121212] dark:text-white">
       <Header />
