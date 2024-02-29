@@ -1,6 +1,6 @@
-import DarkLogo from "./logo-dark.png";
+import DarkLogo from "../../images/logo-dark.png";
 import { Link } from "react-router-dom";
-import Logo from "./logo.png";
+import Logo from "../../images/logo.png";
 import { MoonIcon } from "@heroicons/react/24/outline";
 import type { MouseEventHandler } from "react";
 import { NavLinks } from "../utils";
