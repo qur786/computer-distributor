@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import { Logo } from "../Logo";
 import { NavLinks } from "../utils";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
 
 export function Footer(): JSX.Element {
   return (
     // TODO: add social media links & fix the alignment in the mobile view
-    <footer className="backdrop-blur-md py-2 w-full shadow-top-shadow dark:bg-[#1E1E1E]">
+    <footer className="backdrop-blur-md py-2 w-full shadow-top-shadow dark:bg-[#1E1E1E] flex flex-col gap-4">
       <div className="flex flex-col items-center justify-around gap-y-12 p-10 md:flex-row md:items-start md:gap-0">
         <div className="flex flex-col gap-4 text-center md:text-start">
           <h5 className="text-xl font-bold">Contact</h5>
@@ -73,6 +74,9 @@ export function Footer(): JSX.Element {
             </Link>
           </div>
         </div>
+      </div>
+      <div className="self-center">
+        <Logo />
       </div>
       <div className="text-center">
         &copy; 2023 - Computer Distributor. All rights reserved
