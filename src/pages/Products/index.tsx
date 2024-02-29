@@ -1,4 +1,5 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import { Pagination } from "../../components/Pagination";
 import { ProductCard } from "../../components/ProductCard";
 import { Products } from "./data";
 
@@ -25,6 +26,7 @@ export function ProductsPage(): JSX.Element {
           <ProductCard key={product.title} {...product} />
         ))}
       </div>
+      <Pagination pageLength={10} currentPage={4} />
     </div>
   );
 }
