@@ -38,9 +38,17 @@ export function Pagination({ pageLength }: PaginationProps): JSX.Element {
     }
   };
 
+  const handleNextClick: MouseEventHandler<HTMLButtonElement> = () => {
+    setCurrentPage((prev) => (prev === pageLength ? prev : prev + 1));
+  };
+
+  const handlePrevClick: MouseEventHandler<HTMLButtonElement> = () => {
+    setCurrentPage((prev) => (prev === 1 ? prev : prev - 1));
+  };
+
   return (
     <div className="flex flex-row items-center gap-2">
-      <button>
+      <button onClick={handlePrevClick}>
         <ChevronLeftIcon className="h-6 text-slate-500" />
       </button>
       {[...new Array(pageLength).keys()].map((_, idx) => (
@@ -53,7 +61,7 @@ export function Pagination({ pageLength }: PaginationProps): JSX.Element {
           {idx + 1}
         </PaginationButton>
       ))}
-      <button>
+      <button onClick={handleNextClick}>
         <ChevronRightIcon className="h-6 text-slate-500" />
       </button>
     </div>
