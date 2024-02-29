@@ -20,7 +20,7 @@ export function SearchBar({ open, onClose }: SearchBarProps): JSX.Element {
       <input
         type="search"
         name="search"
-        placeholder="Search products..."
+        placeholder="Search products"
         className="md:flex-grow-[10] flex-grow-[2] p-2 bg-transparent focus:outline-none rounded-xl"
       />
       <span className="md:flex-grow flex-grow-[2]">
