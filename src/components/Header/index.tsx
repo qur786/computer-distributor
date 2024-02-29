@@ -1,7 +1,9 @@
+import DarkLogo from "./logo-dark.png";
+import { Link } from "react-router-dom";
+import Logo from "./logo.png";
 import { MoonIcon } from "@heroicons/react/24/outline";
 import type { MouseEventHandler } from "react";
 import { NavLinks } from "../utils";
-import PlaceholderLogo from "./logo-placeholder.png";
 import { SideBar } from "../SideBar";
 import { StyledNavLink } from "../StyledNavlink";
 import { useState } from "react";
@@ -23,12 +25,14 @@ export function Header(): JSX.Element {
   return (
     <>
       <header className="fixed w-full p-4 dark:text-white backdrop-blur-sm shadow-lg flex items-center justify-between">
-        <img
-          src={PlaceholderLogo}
-          alt="Logo"
-          className="h-12 w-28"
-          title="Logo"
-        />
+        <Link to={NavLinks.Home}>
+          <img
+            src={theme === "dark" ? DarkLogo : Logo}
+            alt="Logo"
+            className="h-12 w-24 object-cover"
+            title="Logo"
+          />
+        </Link>
         <nav className="hidden gap-8 md:flex">
           {Object.entries(NavLinks).map(([title, link]) => (
             <StyledNavLink to={link} key={title}>
