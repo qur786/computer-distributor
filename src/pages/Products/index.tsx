@@ -35,7 +35,7 @@ export function ProductsPage(): JSX.Element {
           placeholder="Search products"
           value={search}
           onChange={handleSearchChange}
-          className="outline-none"
+          className="outline-none bg-transparent"
         />
       </div>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-x-8 gap-y-8 md:min-h-[30vh] min-h-[25vh]">
