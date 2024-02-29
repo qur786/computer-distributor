@@ -82,7 +82,11 @@ export function Pagination({
 
   return (
     <div className="flex flex-row items-center md:gap-2 gap-1">
-      <button onClick={handlePrevClick}>
+      <button
+        onClick={handlePrevClick}
+        disabled={currentPage === 1}
+        className="disabled:cursor-not-allowed"
+      >
         <ChevronLeftIcon className="h-6 text-slate-500" />
       </button>
       {pages.map((page) =>
@@ -103,7 +107,11 @@ export function Pagination({
           // PaginationButton has been used to make sure the size of the ... remains same as number buttons
         ),
       )}
-      <button onClick={handleNextClick}>
+      <button
+        onClick={handleNextClick}
+        disabled={currentPage === pageLength}
+        className="disabled:cursor-not-allowed"
+      >
         <ChevronRightIcon className="h-6 text-slate-500" />
       </button>
     </div>
