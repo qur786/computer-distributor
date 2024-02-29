@@ -16,7 +16,7 @@ export function App(): JSX.Element {
   return (
     <div className="font-barlow flex flex-col items-center gap-8 dark:bg-[#121212] dark:text-white">
       <Header />
-      <main className="container min-h-screen mt-12 md:px-0 px-12">
+      <main className="container min-h-screen mt-12 md:px-0 px-4">
         <Suspense fallback={<LoadingOverlay theme={theme} />}>
           <Outlet />
         </Suspense>
