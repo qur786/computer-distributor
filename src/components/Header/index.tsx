@@ -1,18 +1,13 @@
+import { Bars3Icon } from "@heroicons/react/24/solid";
 import type { MouseEventHandler } from "react";
 import { NavLinks } from "../utils";
 import PlaceholderLogo from "./logo-placeholder.png";
-import { SearchBar } from "../SearchBar";
 import { SideBar } from "../SideBar";
 import { StyledNavLink } from "../StyledNavlink";
-import { useMatch } from "react-router-dom";
 import { useState } from "react";
-import { Bars3Icon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 export function Header(): JSX.Element {
   const [modalOpen, setModalOpen] = useState(false);
-  const [searchBarOpen, setSearchBarOpen] = useState(false);
-
-  const matchObject = useMatch(NavLinks.Products); // If the current location is the product page
 
   const handleSidebarClose = () => {
     setModalOpen(false);
@@ -20,14 +15,6 @@ export function Header(): JSX.Element {
 
   const toggleSidebar: MouseEventHandler<HTMLButtonElement> = () => {
     setModalOpen((prev) => !prev);
-  };
-
-  const handleSearchBarOpen = () => {
-    setSearchBarOpen(true);
-  };
-
-  const handleSearchBarClose = () => {
-    setSearchBarOpen(false);
   };
 
   return (
@@ -46,24 +33,15 @@ export function Header(): JSX.Element {
             </StyledNavLink>
           ))}
         </nav>
-        <span className="flex flex-row gap-4">
-          {matchObject ? (
-            <MagnifyingGlassIcon
-              className="h-6 text-slate-500 cursor-pointer"
-              onClick={handleSearchBarOpen}
-            />
-          ) : undefined}
-          <button
-            title="Menu"
-            onClick={toggleSidebar}
-            className="opacity-50 hover:opacity-100 md:hidden"
-          >
-            <Bars3Icon className="h-6" />
-          </button>
-        </span>
+        <button
+          title="Menu"
+          onClick={toggleSidebar}
+          className="opacity-50 hover:opacity-100 md:invisible"
+        >
+          <Bars3Icon className="h-6" />
+        </button>
       </header>
       <SideBar open={modalOpen} onClose={handleSidebarClose} />
-      <SearchBar open={searchBarOpen} onClose={handleSearchBarClose} />
     </>
   );
 }
