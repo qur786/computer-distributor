@@ -1,7 +1,7 @@
 import type { MouseEventHandler } from "react";
 import { twMerge } from "tailwind-merge";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import { type ComponentProps, useState } from "react";
+import { type ComponentProps, useMemo, useState } from "react";
 
 interface PaginationProps {
   pageLength: number;
@@ -46,23 +46,59 @@ export function Pagination({ pageLength }: PaginationProps): JSX.Element {
     setCurrentPage((prev) => (prev === 1 ? prev : prev - 1));
   };
 
+  const pages = useMemo(() => {
+    let output: (number | "...")[] = [];
+    if (pageLength <= 7) {
+      output = [...new Array(pageLength).keys()].map((ele) => ele + 1);
+    } else if (currentPage <= 5) {
+      output = [1, 2, 3, 4, 5, "...", pageLength];
+    } else if (pageLength - currentPage < 5) {
+      output = [
+        1,
+        "...",
+        pageLength - 4,
+        pageLength - 3,
+        pageLength - 2,
+        pageLength - 1,
+        pageLength,
+      ];
+    } else {
+      output = [
+        1,
+        "...",
+        currentPage - 1,
+        currentPage,
+        currentPage + 1,
+        "...",
+        pageLength,
+      ];
+    }
+    return output;
+  }, [currentPage, pageLength]);
+
   return (
-    <div className="flex flex-row items-center gap-2">
+    <div className="flex flex-row items-center md:gap-2 gap-1">
       <button onClick={handlePrevClick}>
         <ChevronLeftIcon className="h-6 text-slate-500" />
       </button>
-      {[...new Array(pageLength).keys()]
-        .map((page) => page + 1)
-        .map((page) => (
+      {pages.map((page) =>
+        typeof page === "number" ? (
+          // eslint-disable-next-line react/jsx-key
           <PaginationButton
-            key={page}
             active={currentPage === page}
             onClick={handlePageSelect}
             data-page={page}
           >
             {page}
           </PaginationButton>
-        ))}
+        ) : (
+          // eslint-disable-next-line react/jsx-key
+          <PaginationButton active={false} className="border-none">
+            {page}
+          </PaginationButton>
+          // PaginationButton has been used to make sure the size of the ... remains same as number buttons
+        ),
+      )}
       <button onClick={handleNextClick}>
         <ChevronRightIcon className="h-6 text-slate-500" />
       </button>
