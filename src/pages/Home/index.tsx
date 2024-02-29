@@ -6,7 +6,7 @@ export function HomePage(): JSX.Element {
     <div className="flex flex-col items-center">
       <div className="h-screen w-full flex items-center justify-center flex-col-reverse md:flex-row">
         <div className="w-full md:w-1/2">
-          <h6 className="text-6xl md:mt-12 md:ml-12 font-bold text-[#212b36] text-center">
+          <h6 className="text-6xl md:mt-12 md:ml-12 font-bold text-[#212b36] dark:text-white text-center">
             Shop your new Device with{" "}
             <span className="text-[#fa541c]">Computer Distributer</span>
           </h6>
@@ -15,7 +15,7 @@ export function HomePage(): JSX.Element {
           <img src={BackgroundImage} alt="store" />
         </div>
       </div>
-      <div className="h-screen md:w-full w-[90%] rounded-xl bg-slate-100 py-4 box-border flex flex-col md:gap-8">
+      <div className="h-screen md:w-full w-[90%] rounded-xl bg-slate-100 dark:bg-slate-900 py-4 box-border flex flex-col md:gap-8">
         <div className="h-1/2 md:h-4/6 flex flex-col justify-center items-center">
           <img
             src={BackgroundImage2}
