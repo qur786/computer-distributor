@@ -51,16 +51,18 @@ export function Pagination({ pageLength }: PaginationProps): JSX.Element {
       <button onClick={handlePrevClick}>
         <ChevronLeftIcon className="h-6 text-slate-500" />
       </button>
-      {[...new Array(pageLength).keys()].map((_, idx) => (
-        <PaginationButton
-          key={idx}
-          active={currentPage === idx + 1}
-          onClick={handlePageSelect}
-          data-page={idx + 1}
-        >
-          {idx + 1}
-        </PaginationButton>
-      ))}
+      {[...new Array(pageLength).keys()]
+        .map((page) => page + 1)
+        .map((page) => (
+          <PaginationButton
+            key={page}
+            active={currentPage === page}
+            onClick={handlePageSelect}
+            data-page={page}
+          >
+            {page}
+          </PaginationButton>
+        ))}
       <button onClick={handleNextClick}>
         <ChevronRightIcon className="h-6 text-slate-500" />
       </button>
