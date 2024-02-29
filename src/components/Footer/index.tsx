@@ -1,12 +1,9 @@
-import DarkLogo from "../../images/logo-dark.png";
 import { Link } from "react-router-dom";
-import Logo from "../../images/logo.png";
+import { Logo } from "../Logo";
 import { NavLinks } from "../utils";
-import { useTheme } from "../../hooks/theme";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
 
 export function Footer(): JSX.Element {
-  const { theme } = useTheme();
   return (
     // TODO: add social media links & fix the alignment in the mobile view
     <footer className="backdrop-blur-md py-2 w-full shadow-top-shadow dark:bg-[#1E1E1E] flex flex-col gap-4">
@@ -78,14 +75,9 @@ export function Footer(): JSX.Element {
           </div>
         </div>
       </div>
-      <Link to={NavLinks.Home} className="self-center">
-        <img
-          src={theme === "dark" ? DarkLogo : Logo}
-          alt="Logo"
-          className="h-12 w-24 object-cover"
-          title="Logo"
-        />
-      </Link>
+      <div className="self-center">
+        <Logo />
+      </div>
       <div className="text-center">
         &copy; 2023 - Computer Distributor. All rights reserved
       </div>
