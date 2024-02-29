@@ -15,7 +15,7 @@ export function PaginationButton({
       className={twMerge(
         "rounded-full border-2 size-8",
         props.className,
-        active ? "bg-green-100 border-green-300" : "",
+        active ? "bg-green-100 text-green-900 border-green-300" : "",
       )}
     />
   );

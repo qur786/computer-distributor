@@ -20,7 +20,7 @@ export function SideBar({ onClose, open }: SideBarProps): JSX.Element {
       />
       <div
         className={twMerge(
-          "fixed -left-[500px] transition-[left] duration-1000 top-0 z-20 h-screen bg-white px-16 shadow-2xl md:hidden",
+          "fixed -left-[500px] transition-[left] duration-1000 top-0 z-20 h-screen bg-white px-16 shadow-2xl md:hidden dark:bg-[#1E1E1E]",
           open === true ? "left-0" : "",
         )}
       >
@@ -30,7 +30,7 @@ export function SideBar({ onClose, open }: SideBarProps): JSX.Element {
             onClick={onClose}
             className="opacity-75 hover:opacity-100"
           >
-            <XMarkIcon className="h-8 text-red-700" />
+            <XMarkIcon className="h-8 text-red-500" />
           </button>
           {Object.entries(NavLinks).map(([title, link]) => (
             <StyledNavLink to={link} key={title} onClick={onClose}>

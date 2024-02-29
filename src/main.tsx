@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
+import { ThemeProvider } from "./components/ThemeProvider/theme-context.tsx";
 import { routes } from "./routes.tsx";
 import "./index.css";
 import "@fontsource/barlow"; // Defaults to weight 400
@@ -16,6 +17,8 @@ import "@fontsource/barlow/900.css"; // Specify weight
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLDivElement).render(
   <React.StrictMode>
-    <RouterProvider router={routes} />
+    <ThemeProvider>
+      <RouterProvider router={routes} />
+    </ThemeProvider>
   </React.StrictMode>,
 );
