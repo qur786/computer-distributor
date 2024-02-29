@@ -1,32 +1,12 @@
-import { twMerge } from "tailwind-merge";
+import { PaginationButton } from "../PaginationButton";
+import { useMemo } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import { type ComponentProps, useMemo } from "react";
 import type { Dispatch, MouseEventHandler, SetStateAction } from "react";
 
 interface PaginationProps {
   pageLength: number;
   currentPage: number;
   setCurrentPage: Dispatch<SetStateAction<number>>;
-}
-
-interface PaginationButtonProps extends ComponentProps<"button"> {
-  active: boolean;
-}
-
-function PaginationButton({
-  active,
-  ...props
-}: PaginationButtonProps): JSX.Element {
-  return (
-    <button
-      {...props}
-      className={twMerge(
-        "rounded-full border-2 size-8",
-        props.className,
-        active ? "bg-green-100 border-green-300" : "",
-      )}
-    />
-  );
 }
 
 export function Pagination({
