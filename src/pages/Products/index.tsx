@@ -1,3 +1,4 @@
+import type { ChangeEventHandler } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { Pagination } from "../../components/Pagination";
 import { ProductCard } from "../../components/ProductCard";
@@ -10,6 +11,12 @@ export function ProductsPage(): JSX.Element {
     : 20;
   const pageLength = Math.ceil(Products.length / productsPerPage);
   const [currentPage, setCurrentPage] = useState(1);
+  const [search, setSearch] = useState("");
+
+  const handleSearchChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+    setSearch(e.target.value);
+  };
+
   return (
     <div className="mt-16 flex flex-col items-center gap-16">
       <h3 className="text-4xl text-center font-bold">
@@ -23,6 +30,8 @@ export function ProductsPage(): JSX.Element {
           type="search"
           name="product-search"
           placeholder="Search products"
+          value={search}
+          onChange={handleSearchChange}
           className="outline-none"
         />
       </div>
@@ -31,9 +40,11 @@ export function ProductsPage(): JSX.Element {
         {Products.slice(
           productsPerPage * (currentPage - 1),
           productsPerPage * (currentPage - 1) + productsPerPage,
-        ).map((product) => (
-          <ProductCard key={product.title} {...product} />
-        ))}
+        )
+          .filter(({ title }) => new RegExp(search, "i").test(title))
+          .map((product) => (
+            <ProductCard key={product.title} {...product} />
+          ))}
       </div>
       <div className="flex flex-col items-center justify-center gap-8">
         <p className="font-semibold text-sky-400 text-center">
