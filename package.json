@@ -1,5 +1,5 @@
 {
-  "name": "computer-distributor-vite",
+  "name": "computer-distributor",
   "version": "1.0.0",
   "private": false,
   "description": "A React template generated with vite with prettier, eslint, typescript and tailwind-css features for cross-platform development",
