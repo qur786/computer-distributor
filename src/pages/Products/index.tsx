@@ -53,21 +53,23 @@ export function ProductsPage(): JSX.Element {
           </p>
         )}
       </div>
-      <div className="flex flex-col items-center justify-center gap-8">
-        <p className="font-semibold text-sky-400 text-center">
-          Showing {productsPerPage * (currentPage - 1) + 1} -{" "}
-          {productsPerPage * (currentPage - 1) + productsPerPage >
-          filteredProducts.length
-            ? filteredProducts.length
-            : productsPerPage * (currentPage - 1) + productsPerPage}{" "}
-          products out of total {filteredProducts.length} products
-        </p>
-        <Pagination
-          pageLength={pageLength}
-          setCurrentPage={setCurrentPage}
-          currentPage={currentPage}
-        />
-      </div>
+      {filteredProducts.length > 0 ? (
+        <div className="flex flex-col items-center justify-center gap-8">
+          <p className="font-semibold text-sky-400 text-center">
+            Showing {productsPerPage * (currentPage - 1) + 1} -{" "}
+            {productsPerPage * (currentPage - 1) + productsPerPage >
+            filteredProducts.length
+              ? filteredProducts.length
+              : productsPerPage * (currentPage - 1) + productsPerPage}{" "}
+            products out of total {filteredProducts.length} products
+          </p>
+          <Pagination
+            pageLength={pageLength}
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+          />
+        </div>
+      ) : undefined}
     </div>
   );
 }
