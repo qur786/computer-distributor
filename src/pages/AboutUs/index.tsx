@@ -9,7 +9,9 @@ export function AboutUsPage(): JSX.Element {
         <img src={AboutImage} alt="About us" />
       </div>
       <div className="flex flex-col gap-4">
-        <h2 className="tracking-widest text-gray-500">ABOUT US</h2>
+        <h2 className="text-xl tracking-widest text-gray-500 dark:text-white">
+          ABOUT US
+        </h2>
         <p>
           Having built up a very solid and stable reputation for our quality
           products and services over the last 10 years, the{" "}
@@ -33,7 +35,9 @@ export function AboutUsPage(): JSX.Element {
         </p>
       </div>
       <div className="flex flex-col gap-4">
-        <h2 className="tracking-widest text-gray-500">CUSTOMER SERVICE</h2>
+        <h2 className="text-xl tracking-widest text-gray-500 dark:text-white">
+          CUSTOMER SERVICE
+        </h2>
         <p>
           If there&apos;s anything you need at all we are here to help. You can
           contact us by{" "}
@@ -48,7 +52,9 @@ export function AboutUsPage(): JSX.Element {
         </p>
       </div>
       <div className="flex flex-col gap-4">
-        <h2 className="tracking-widest text-gray-500">REPAIRS</h2>
+        <h2 className="text-xl tracking-widest text-gray-500 dark:text-white">
+          REPAIRS
+        </h2>
         <p>
           Our trained engineers can fix any PC, laptop, Apple and more. Computer
           tune ups, Virus removal and data recovery services available.{" "}
@@ -61,7 +67,9 @@ export function AboutUsPage(): JSX.Element {
         </p>
       </div>
       <div className="flex flex-col gap-4">
-        <h2 className="tracking-widest text-gray-500">OUR CUSTOMERS</h2>
+        <h2 className="text-xl tracking-widest text-gray-500 dark:text-white">
+          OUR CUSTOMERS
+        </h2>
         {/* TODO: add google review cards */}
       </div>
     </main>
