@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { NavLinks } from "../utils";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
 
 export function Footer(): JSX.Element {
@@ -49,20 +51,27 @@ export function Footer(): JSX.Element {
         <div className="flex flex-col gap-4 text-center md:text-start">
           <h5 className="text-xl font-bold">Our Guarantees</h5>
           <p>
-            Shipping in 3 days <br />
             Free returns within 14 days <br />
             Secure payments
           </p>
         </div>
         <div className="flex flex-col gap-4 text-center md:text-start">
           <h5 className="text-xl font-bold">Our Company</h5>
-          <p>
-            Delivery <br />
-            Legal Notice <br />
-            About Us <br />
-            Contact Us <br />
-            Terms and conditions of use
-          </p>
+          <div>
+            <Link
+              to={NavLinks["About Us"]}
+              className="text-cyan-400 hover:underline"
+            >
+              About Us
+            </Link>
+            <br />
+            <Link
+              to={NavLinks["Contact Us"]}
+              className="text-cyan-400 hover:underline"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
       <div className="text-center">
