@@ -32,7 +32,7 @@ export function Input({
           id={name}
           rows={textArea.rows}
           placeholder={placeholder}
-          className="w-full resize-none rounded-xl border bg-gray-100 p-2 text-sm focus:bg-white bg-transparent"
+          className="w-full resize-none rounded-xl border p-2 text-sm bg-transparent"
           required={required}
         />
       ) : (
@@ -41,7 +41,7 @@ export function Input({
           name={name}
           id={name}
           placeholder={placeholder}
-          className="w-full rounded-xl border bg-gray-100 p-2 text-sm focus:bg-white bg-transparent"
+          className="w-full rounded-xl border p-2 text-sm bg-transparent"
           required={required}
         />
       )}

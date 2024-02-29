@@ -53,7 +53,7 @@ export function ProductsPage(): JSX.Element {
           </p>
         )}
       </div>
-      {filteredProducts.length > 0 ? (
+      {filteredProducts.length > 0 && pageLength > 1 ? (
         <div className="flex flex-col items-center justify-center gap-8">
           <p className="font-semibold text-sky-400 text-center">
             Showing {productsPerPage * (currentPage - 1) + 1} -{" "}
