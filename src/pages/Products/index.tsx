@@ -38,16 +38,20 @@ export function ProductsPage(): JSX.Element {
           className="outline-none"
         />
       </div>
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-x-8 gap-y-8">
-        {filteredProducts
-          .slice(
-            productsPerPage * (currentPage - 1),
-            productsPerPage * (currentPage - 1) + productsPerPage,
-          )
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-x-8 gap-y-8 md:min-h-[30vh] min-h-[25vh]">
+        {filteredProducts.length > 0 ? (
+          filteredProducts
+            .slice(
+              productsPerPage * (currentPage - 1),
+              productsPerPage * (currentPage - 1) + productsPerPage,
+            )
 
-          .map((product) => (
-            <ProductCard key={product.title} {...product} />
-          ))}
+            .map((product) => <ProductCard key={product.title} {...product} />)
+        ) : (
+          <p className="text-center md:col-span-3 text-red-600 font-semibold text-xl">
+            No products found.
+          </p>
+        )}
       </div>
       <div className="flex flex-col items-center justify-center gap-8">
         <p className="font-semibold text-sky-400 text-center">
