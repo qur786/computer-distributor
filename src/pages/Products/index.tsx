@@ -5,6 +5,8 @@ import { Products } from "./data";
 import { useState } from "react";
 
 export function ProductsPage(): JSX.Element {
+  const productsPerPage = 20; // TODO: add mobile count to 20
+  const pageLength = Math.ceil(Products.length / productsPerPage);
   const [currentPage, setCurrentPage] = useState(1);
   return (
     <div className="mt-16 flex flex-col items-center gap-16">
@@ -24,12 +26,15 @@ export function ProductsPage(): JSX.Element {
       </div>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-x-8 gap-y-8">
         {/* TODO: remove it and use correct data */}
-        {Products.map((product) => (
+        {Products.slice(
+          productsPerPage * (currentPage - 1),
+          productsPerPage * (currentPage - 1) + productsPerPage,
+        ).map((product) => (
           <ProductCard key={product.title} {...product} />
         ))}
       </div>
       <Pagination
-        pageLength={10}
+        pageLength={pageLength}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
       />
