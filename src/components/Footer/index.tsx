@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Logo } from "../Logo";
 import { NavLinks } from "../utils";
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
 export function Footer(): JSX.Element {
   return (
@@ -13,13 +13,13 @@ export function Footer(): JSX.Element {
           <address className="not-italic">
             <ul className="flex flex-col items-center md:items-start">
               <li className="flex flex-row items-start gap-2">
-                <MapPinIcon className="h-4" />
+                <MapPinIcon className="h-4 text-red-700" />
                 Post office Chaibasa,
                 <br />
                 Jharkhand 833201 India
               </li>
               <li className="flex flex-row items-center gap-2">
-                <EnvelopeIcon className="h-4" />
+                <EnvelopeIcon className="h-4 text-green-900" />
                 <a
                   className="text-cyan-400 hover:underline"
                   href="mailto:#"
