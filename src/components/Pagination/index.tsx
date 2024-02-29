@@ -1,10 +1,12 @@
-import type { MouseEventHandler } from "react";
 import { twMerge } from "tailwind-merge";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import { type ComponentProps, useMemo, useState } from "react";
+import { type ComponentProps, useMemo } from "react";
+import type { Dispatch, MouseEventHandler, SetStateAction } from "react";
 
 interface PaginationProps {
   pageLength: number;
+  currentPage: number;
+  setCurrentPage: Dispatch<SetStateAction<number>>;
 }
 
 interface PaginationButtonProps extends ComponentProps<"button"> {
@@ -27,9 +29,11 @@ function PaginationButton({
   );
 }
 
-export function Pagination({ pageLength }: PaginationProps): JSX.Element {
-  const [currentPage, setCurrentPage] = useState(1);
-
+export function Pagination({
+  pageLength,
+  currentPage,
+  setCurrentPage,
+}: PaginationProps): JSX.Element {
   const handlePageSelect: MouseEventHandler<HTMLButtonElement> = (e) => {
     const page = e.currentTarget.getAttribute("data-page");
     const parsedPage = Number.parseInt(page ?? "", 10);

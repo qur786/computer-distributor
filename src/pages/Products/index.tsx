@@ -2,8 +2,10 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { Pagination } from "../../components/Pagination";
 import { ProductCard } from "../../components/ProductCard";
 import { Products } from "./data";
+import { useState } from "react";
 
 export function ProductsPage(): JSX.Element {
+  const [currentPage, setCurrentPage] = useState(1);
   return (
     <div className="mt-16 flex flex-col items-center gap-16">
       <h3 className="text-4xl text-center font-bold">
@@ -26,7 +28,11 @@ export function ProductsPage(): JSX.Element {
           <ProductCard key={product.title} {...product} />
         ))}
       </div>
-      <Pagination pageLength={10} />
+      <Pagination
+        pageLength={10}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
     </div>
   );
 }
