@@ -4,7 +4,7 @@ import { NavLinks } from "../../components/utils";
 
 export function AboutUsPage(): JSX.Element {
   return (
-    <main className="flex flex-col gap-6">
+    <main className="flex flex-col gap-6 mt-8">
       <div className="w-full self-center md:w-1/2">
         <img src={AboutImage} alt="About us" />
       </div>
