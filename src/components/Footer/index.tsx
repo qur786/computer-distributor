@@ -113,7 +113,7 @@ export function Footer(): JSX.Element {
       <div className="text-center">
         &copy; 2023 - Computer Distributor. All rights reserved
       </div>
-      <div className="self-center md:self-end flex flex-row items-center gap-1 md:pr-4">
+      <div className="self-center flex flex-row items-center gap-1 md:pr-4">
         Developed with <HeartIcon className="h-4 text-pink-600" /> and Care by
         <a
           href="https://qur786.github.io/portfolio/"
