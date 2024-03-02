@@ -1,5 +1,6 @@
 import BackgroundImage from "./computers-bg-removed.png";
 import BackgroundImage2 from "./computers-bg-removed2.png";
+import BestComputer from "./best-computer.png";
 import { DemoCard } from "../../components/DemoCard";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
@@ -46,10 +47,10 @@ export function HomePage(): JSX.Element {
         <h2 className="text-4xl font-semibold text-center">What you get?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <DemoCard
-            image={BackgroundImage}
+            image={BestComputer}
             imageAlt={""}
             title="Best computers"
-            description="9 Niche shop demos for online store. Super store, Fashion, Electronic, Grocery and etc"
+            description="Discover the finest selection of computers and laptops at our shop. From cutting-edge performance to sleek designs, find the perfect device to suit your needs and elevate your computing experience."
           />
           <DemoCard
             image={RepairImage}
