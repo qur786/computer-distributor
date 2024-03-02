@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { Logo } from "../Logo";
 import { NavLinks } from "../utils";
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import {
+  EnvelopeIcon,
+  HeartIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/solid";
 
 export function Footer(): JSX.Element {
   return (
@@ -80,6 +85,10 @@ export function Footer(): JSX.Element {
       </div>
       <div className="text-center">
         &copy; 2023 - Computer Distributor. All rights reserved
+      </div>
+      <div className="self-center md:self-end flex flex-row items-center gap-1 md:pr-4">
+        Developed with <HeartIcon className="h-4 text-pink-600" /> and Care by
+        Qurban Ahmad
       </div>
     </footer>
   );
