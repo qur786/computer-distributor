@@ -1,4 +1,4 @@
-import AboutImage from "./about-us.png";
+import AboutImage from "./about-us.svg";
 import { NavLink } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
 
