@@ -1,6 +1,11 @@
+import { FacebookIcon } from "../../icons/facebook";
+import { GmailIcon } from "../../icons/gmail";
+import { InstagramIcon } from "../../icons/instagram";
 import { Link } from "react-router-dom";
 import { Logo } from "../Logo";
 import { NavLinks } from "../utils";
+import { TwitterIcon } from "../../icons/twitter";
+import { WhatsappIcon } from "../../icons/whatsapp";
 import {
   EnvelopeIcon,
   HeartIcon,
@@ -82,6 +87,28 @@ export function Footer(): JSX.Element {
       </div>
       <div className="self-center">
         <Logo />
+      </div>
+      <div className="self-center flex flex-row gap-4">
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <InstagramIcon className="h-5 hover:scale-125 transition-transform" />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Whatsapp">
+          <WhatsappIcon className="h-5 fill-[#075E54] hover:scale-125 transition-transform" />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook">
+          <FacebookIcon className="h-5 hover:scale-125 transition-transform" />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Email">
+          <GmailIcon className="h-5 fill-[#C71610] hover:scale-125 transition-transform" />
+        </a>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="X(Twitter)"
+        >
+          <TwitterIcon className="h-5 fill-[#1DA1F2] hover:scale-125 transition-transform" />
+        </a>
       </div>
       <div className="text-center">
         &copy; 2023 - Computer Distributor. All rights reserved
