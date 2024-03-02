@@ -1,4 +1,4 @@
-import BackgroundImage from "./computers-bg-removed.png";
+import FirstSectionImage from "./first-section.svg";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
 import SecondSectionImage from "./second-section.svg";
@@ -17,7 +17,7 @@ export function HomePage(): JSX.Element {
           </h6>
         </div>
         <div className="w-full md:w-1/2 hidden md:block">
-          <img src={BackgroundImage} alt="store" />
+          <img src={FirstSectionImage} alt="store" />
         </div>
       </div>
       {/* Second section */}
