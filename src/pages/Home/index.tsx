@@ -5,6 +5,7 @@ import BestComputer from "./best-computer.svg";
 import BugFix from "./bug-fix.svg";
 import CustomPC from "./custom-pc.svg";
 import DataRecovery from "./data-recovery.svg";
+import HardwareUpgrade from "./hardware-upgrade.svg";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
 import OnsiteRepair from "./onsite-repair.svg";
@@ -92,6 +93,12 @@ export function HomePage(): JSX.Element {
             imageAlt={"Data Recovery"}
             title="Data Recovery"
             description="Accidentally deleted important files? Don't panic. We specialize in retrieving lost data from hard drives, SSDs, and other storage devices."
+          />
+          <ServiceCard
+            image={HardwareUpgrade}
+            imageAlt={"Hardware Upgrades"}
+            title="Hardware Upgrades"
+            description="Boost your computer's performance with our hardware upgrade services. From RAM and graphics cards to storage drives, we'll help you take your system to the next level."
           />
         </div>
       </div>
