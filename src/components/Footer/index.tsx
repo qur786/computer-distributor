@@ -97,6 +97,7 @@ export function Footer(): JSX.Element {
           Qurban
         </a>
       </div>
+      {/* TODO: add google reviews once the website domain is created. */}
     </footer>
   );
 }
