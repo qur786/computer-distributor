@@ -4,6 +4,7 @@ import BackgroundImage2 from "./computers-bg-removed2.png";
 import BestComputer from "./best-computer.svg";
 import BugFix from "./bug-fix.svg";
 import CustomPC from "./custom-pc.svg";
+import DataRecovery from "./data-recovery.svg";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
 import OnsiteRepair from "./onsite-repair.svg";
@@ -85,6 +86,12 @@ export function HomePage(): JSX.Element {
             imageAlt={"Virus & Malware Removal"}
             title="Virus & Malware Removal"
             description="Say goodbye to pesky viruses and malware. Our experts will thoroughly clean your system and ensure it's protected against future threats."
+          />
+          <ServiceCard
+            image={DataRecovery}
+            imageAlt={"Data Recovery"}
+            title="Data Recovery"
+            description="Accidentally deleted important files? Don't panic. We specialize in retrieving lost data from hard drives, SSDs, and other storage devices."
           />
         </div>
       </div>
