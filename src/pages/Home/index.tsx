@@ -4,6 +4,7 @@ import BackgroundImage2 from "./computers-bg-removed2.png";
 export function HomePage(): JSX.Element {
   return (
     <div className="flex flex-col items-center">
+      {/* First section */}
       <div className="h-screen w-full flex items-center justify-center flex-col-reverse md:flex-row">
         <div className="w-full md:w-1/2">
           <h6 className="text-6xl md:mt-12 md:ml-12 font-bold text-[#212b36] dark:text-white text-center">
@@ -15,6 +16,7 @@ export function HomePage(): JSX.Element {
           <img src={BackgroundImage} alt="store" />
         </div>
       </div>
+      {/* Second section */}
       <div className="h-screen md:w-full w-[90%] rounded-xl bg-slate-100 dark:bg-slate-900 py-4 px-2 box-border flex flex-col md:gap-8">
         <div className="h-1/2 flex flex-col justify-center items-center">
           <img
