@@ -1,11 +1,11 @@
-import AccessoriesImage from "./accessories.png";
+import AccessoriesImage from "./accessories.svg";
 import BackgroundImage from "./computers-bg-removed.png";
 import BackgroundImage2 from "./computers-bg-removed2.png";
-import BestComputer from "./best-computer.png";
+import BestComputer from "./best-computer.svg";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
-import OnsiteRepair from "./onsite-repair.png";
-import RepairImage from "./repair.png";
+import OnsiteRepair from "./onsite-repair.svg";
+import RepairImage from "./repair.svg";
 import { ServiceCard } from "../../components/ServiceCard";
 
 export function HomePage(): JSX.Element {
