@@ -7,6 +7,7 @@ import HardwareUpgrade from "./hardware-upgrade.svg";
 import OnsiteRepair from "./onsite-repair.svg";
 import RepairImage from "./repair.svg";
 import type { ServiceCardProps } from "../../components/ServiceCard";
+import SoftwareInstallation from "./software-installation.svg";
 
 export const Services: ServiceCardProps[] = [
   {
@@ -64,5 +65,12 @@ export const Services: ServiceCardProps[] = [
     title: "Hardware Upgrades",
     description:
       "Boost your computer's performance with our hardware upgrade services. From RAM and graphics cards to storage drives, we'll help you take your system to the next level.",
+  },
+  {
+    image: SoftwareInstallation,
+    imageAlt: "Software Installation & Troubleshooting",
+    title: "Software Installation & Troubleshooting",
+    description:
+      "Need help installing or troubleshooting software? Our knowledgeable team is here to assist with all your software needs.",
   },
 ];
