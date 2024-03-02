@@ -1,16 +1,16 @@
-interface DemoCardProps {
+interface ServiceCardProps {
   image: string;
   imageAlt: string;
   title: string;
   description: string;
 }
 
-export function DemoCard({
+export function ServiceCard({
   description,
   image,
   imageAlt,
   title,
-}: DemoCardProps): JSX.Element {
+}: ServiceCardProps): JSX.Element {
   return (
     <div className="flex flex-row gap-2 rounded-md h-60 w-full shadow-md dark:bg-[#1E1E1E] box-border p-2">
       <img src={image} alt={imageAlt} className="w-1/2 h-full object-contain" />

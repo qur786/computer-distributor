@@ -2,10 +2,10 @@ import AccessoriesImage from "./accessories.png";
 import BackgroundImage from "./computers-bg-removed.png";
 import BackgroundImage2 from "./computers-bg-removed2.png";
 import BestComputer from "./best-computer.png";
-import { DemoCard } from "../../components/DemoCard";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
 import RepairImage from "./repair.png";
+import { ServiceCard } from "../../components/ServiceCard";
 
 export function HomePage(): JSX.Element {
   return (
@@ -47,25 +47,25 @@ export function HomePage(): JSX.Element {
       <div className="flex flex-col gap-8">
         <h2 className="text-4xl font-semibold text-center">What you get?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <DemoCard
+          <ServiceCard
             image={BestComputer}
             imageAlt={"Best computers"}
             title="Best computers"
             description="Discover the finest selection of computers and laptops at our shop. From cutting-edge performance to sleek designs, find the perfect device to suit your needs and elevate your computing experience."
           />
-          <DemoCard
+          <ServiceCard
             image={RepairImage}
             imageAlt={"Fast repair"}
             title="Fast repair"
             description="Trust our skilled technicians to fix your computer issues promptly and efficiently. Get your device back up and running smoothly with our reliable repair services."
           />
-          <DemoCard
+          <ServiceCard
             image={AccessoriesImage}
             imageAlt={""}
             title="Accessories"
             description="Explore our wide range of accessories, including keyboards, mouse, monitors, motherboard, HDD, SSD, printers, hedaphones, and more, to enhance your computing experience."
           />
-          <DemoCard
+          <ServiceCard
             image={BackgroundImage}
             imageAlt={""}
             title="Best computers"
