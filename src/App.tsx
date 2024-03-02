@@ -1,6 +1,7 @@
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { LoadingOverlay } from "./components/LoadingOverlay";
+import { ScrollIndicator } from "./components/ScrollIndicator";
 import { useTheme } from "./hooks/theme";
 import { Outlet, useLocation } from "react-router-dom";
 import { Suspense, useEffect } from "react";
@@ -22,6 +23,7 @@ export function App(): JSX.Element {
         </Suspense>
       </main>
       <Footer />
+      <ScrollIndicator />
     </div>
   );
 }
