@@ -1,6 +1,8 @@
 import BackgroundImage from "./computers-bg-removed.png";
 import BackgroundImage2 from "./computers-bg-removed2.png";
 import { DemoCard } from "../../components/DemoCard";
+import { Link } from "react-router-dom";
+import { NavLinks } from "../../components/utils";
 
 export function HomePage(): JSX.Element {
   return (
@@ -67,6 +69,21 @@ export function HomePage(): JSX.Element {
             description="9 Niche shop demos for online store. Super store, Fashion, Electronic, Grocery and etc"
           />
         </div>
+      </div>
+      {/* Fourth section */}
+      <div className="h-72 rounded-md w-full md:w-1/2 flex flex-col justify-center items-center gap-8 shadow-lg dark:bg-[#1E1E1E] p-8">
+        <h6 className="text-4xl font-semibold text-center">
+          Still have questions?
+        </h6>
+        <p className="text-center">
+          Please describe your case to receive the most accurate advice.
+        </p>
+        <Link
+          to={NavLinks["Contact Us"]}
+          className="bg-black text-white dark:bg-slate-900 rounded-lg px-4 py-2 hover:scale-110 transition-transform"
+        >
+          Contact Us
+        </Link>
       </div>
     </div>
   );
