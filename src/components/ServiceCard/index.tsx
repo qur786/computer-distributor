@@ -1,4 +1,4 @@
-interface ServiceCardProps {
+export interface ServiceCardProps {
   image: string;
   imageAlt: string;
   title: string;
