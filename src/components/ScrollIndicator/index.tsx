@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./index.css";
 
 export function ScrollIndicator(): JSX.Element {
   const [yPosition, setYPosition] = useState(() => {
@@ -21,13 +20,19 @@ export function ScrollIndicator(): JSX.Element {
     };
   }, []);
   return (
-    <progress
-      value={yPosition}
-      max={
-        window.document.documentElement.scrollHeight -
-        window.document.documentElement.clientHeight
-      }
-      className="fixed top-0 w-full h-[3px] duration-1000"
-    ></progress>
+    <div className="fixed top-0 w-full h-[3px]">
+      <div
+        className="bg-[#fa541c] h-full rounded-lg"
+        style={{
+          width: (
+            yPosition /
+            (window.document.documentElement.scrollHeight -
+              window.document.documentElement.clientHeight)
+          ).toLocaleString(undefined, {
+            style: "percent",
+          }),
+        }}
+      ></div>
+    </div>
   );
 }
