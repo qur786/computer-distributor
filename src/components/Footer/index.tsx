@@ -88,7 +88,14 @@ export function Footer(): JSX.Element {
       </div>
       <div className="self-center md:self-end flex flex-row items-center gap-1 md:pr-4">
         Developed with <HeartIcon className="h-4 text-pink-600" /> and Care by
-        Qurban Ahmad
+        <a
+          href="https://qur786.github.io/portfolio/"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="text-cyan-400 hover:underline"
+        >
+          Qurban
+        </a>
       </div>
     </footer>
   );
