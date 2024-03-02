@@ -1,3 +1,4 @@
+import AccessoriesImage from "./accessories.png";
 import BackgroundImage from "./computers-bg-removed.png";
 import BackgroundImage2 from "./computers-bg-removed2.png";
 import BestComputer from "./best-computer.png";
@@ -48,21 +49,21 @@ export function HomePage(): JSX.Element {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <DemoCard
             image={BestComputer}
-            imageAlt={""}
+            imageAlt={"Best computers"}
             title="Best computers"
             description="Discover the finest selection of computers and laptops at our shop. From cutting-edge performance to sleek designs, find the perfect device to suit your needs and elevate your computing experience."
           />
           <DemoCard
             image={RepairImage}
-            imageAlt={""}
+            imageAlt={"Fast repair"}
             title="Fast repair"
             description="Trust our skilled technicians to fix your computer issues promptly and efficiently. Get your device back up and running smoothly with our reliable repair services."
           />
           <DemoCard
-            image={BackgroundImage}
+            image={AccessoriesImage}
             imageAlt={""}
-            title="Best computers"
-            description="9 Niche shop demos for online store. Super store, Fashion, Electronic, Grocery and etc"
+            title="Accessories"
+            description="Explore our wide range of accessories, including keyboards, mouse, monitors, motherboard, HDD, SSD, printers, hedaphones, and more, to enhance your computing experience."
           />
           <DemoCard
             image={BackgroundImage}
