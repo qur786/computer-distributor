@@ -20,7 +20,7 @@ export function HomePage(): JSX.Element {
         </div>
       </div>
       {/* Second section */}
-      <div className="h-screen md:w-full w-[90%] rounded-xl bg-slate-100 dark:bg-slate-900 py-4 px-2 box-border flex flex-col md:gap-8">
+      <div className="h:screen md:h-[150vh] md:w-full w-[90%] rounded-xl bg-slate-100 dark:bg-slate-900 py-4 px-2 box-border flex flex-col md:gap-8">
         <div className="h-1/2 flex flex-col justify-center items-center">
           <img
             src={BackgroundImage2}
