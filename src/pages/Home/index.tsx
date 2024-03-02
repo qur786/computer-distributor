@@ -3,6 +3,7 @@ import BackgroundImage2 from "./computers-bg-removed2.png";
 import { DemoCard } from "../../components/DemoCard";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
+import RepairImage from "./repair.png";
 
 export function HomePage(): JSX.Element {
   return (
@@ -51,10 +52,10 @@ export function HomePage(): JSX.Element {
             description="9 Niche shop demos for online store. Super store, Fashion, Electronic, Grocery and etc"
           />
           <DemoCard
-            image={BackgroundImage}
+            image={RepairImage}
             imageAlt={""}
-            title="Best computers"
-            description="9 Niche shop demos for online store. Super store, Fashion, Electronic, Grocery and etc"
+            title="Fast repair"
+            description="Trust our skilled technicians to fix your computer issues promptly and efficiently. Get your device back up and running smoothly with our reliable repair services."
           />
           <DemoCard
             image={BackgroundImage}
