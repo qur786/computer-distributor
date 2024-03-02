@@ -4,6 +4,7 @@ import BackgroundImage2 from "./computers-bg-removed2.png";
 import BestComputer from "./best-computer.png";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
+import OnsiteRepair from "./onsite-repair.png";
 import RepairImage from "./repair.png";
 import { ServiceCard } from "../../components/ServiceCard";
 
@@ -66,10 +67,10 @@ export function HomePage(): JSX.Element {
             description="Explore our wide range of accessories, including keyboards, mouse, monitors, motherboard, HDD, SSD, printers, hedaphones, and more, to enhance your computing experience."
           />
           <ServiceCard
-            image={BackgroundImage}
-            imageAlt={""}
-            title="Best computers"
-            description="9 Niche shop demos for online store. Super store, Fashion, Electronic, Grocery and etc"
+            image={OnsiteRepair}
+            imageAlt={"On-Site Repairs"}
+            title="On-Site Repairs"
+            description="Can't make it to our shop? No problem. We offer on-site repair services to conveniently fix your computer issues at your location."
           />
         </div>
       </div>
