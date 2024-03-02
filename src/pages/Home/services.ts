@@ -4,6 +4,7 @@ import BugFix from "./bug-fix.svg";
 import CustomPC from "./custom-pc.svg";
 import DataRecovery from "./data-recovery.svg";
 import HardwareUpgrade from "./hardware-upgrade.svg";
+import Network from "./network.svg";
 import OnsiteRepair from "./onsite-repair.svg";
 import RepairImage from "./repair.svg";
 import type { ServiceCardProps } from "../../components/ServiceCard";
@@ -72,5 +73,12 @@ export const Services: ServiceCardProps[] = [
     title: "Software Installation & Troubleshooting",
     description:
       "Need help installing or troubleshooting software? Our knowledgeable team is here to assist with all your software needs.",
+  },
+  {
+    image: Network,
+    imageAlt: "Networking Solutions",
+    title: "Networking Solutions",
+    description:
+      "Whether you're setting up a home network or optimizing your office's infrastructure, we offer comprehensive networking solutions to keep you connected.",
   },
 ];
