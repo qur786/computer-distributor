@@ -1,12 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export function ScrollIndicator(): JSX.Element {
   const [yPosition, setYPosition] = useState(() => {
-    return (
-      window.document.documentElement.scrollHeight -
-      window.document.documentElement.clientHeight
-    );
+    return window.scrollY;
   });
+
+  const scrollWidth = useMemo(() => {
+    const value =
+      yPosition /
+      (window.document.documentElement.scrollHeight -
+        window.document.documentElement.clientHeight);
+    return Number.isFinite(value)
+      ? value.toLocaleString(undefined, {
+          style: "percent",
+        })
+      : "0%";
+  }, [yPosition]);
 
   useEffect(() => {
     const scrollEventListener = () => {
@@ -24,13 +33,7 @@ export function ScrollIndicator(): JSX.Element {
       <div
         className="bg-[#fa541c] h-full rounded-lg"
         style={{
-          width: (
-            yPosition /
-            (window.document.documentElement.scrollHeight -
-              window.document.documentElement.clientHeight)
-          ).toLocaleString(undefined, {
-            style: "percent",
-          }),
+          width: scrollWidth,
         }}
       ></div>
     </div>
