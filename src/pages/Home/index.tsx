@@ -1,9 +1,10 @@
 import BackgroundImage from "./computers-bg-removed.png";
 import BackgroundImage2 from "./computers-bg-removed2.png";
+import { DemoCard } from "../../components/DemoCard";
 
 export function HomePage(): JSX.Element {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center gap-16">
       {/* First section */}
       <div className="h-screen w-full flex items-center justify-center flex-col-reverse md:flex-row">
         <div className="w-full md:w-1/2">
@@ -37,8 +38,36 @@ export function HomePage(): JSX.Element {
           </p>
         </div>
       </div>
-      {/* Third section */}
-      <div></div>
+      {/* Third section. TODO: add different images, title and descriptions. */}
+      <div className="flex flex-col gap-8">
+        <h2 className="text-4xl font-semibold text-center">What you get?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <DemoCard
+            image={BackgroundImage}
+            imageAlt={""}
+            title="Best computers"
+            description="9 Niche shop demos for online store. Super store, Fashion, Electronic, Grocery and etc"
+          />
+          <DemoCard
+            image={BackgroundImage}
+            imageAlt={""}
+            title="Best computers"
+            description="9 Niche shop demos for online store. Super store, Fashion, Electronic, Grocery and etc"
+          />
+          <DemoCard
+            image={BackgroundImage}
+            imageAlt={""}
+            title="Best computers"
+            description="9 Niche shop demos for online store. Super store, Fashion, Electronic, Grocery and etc"
+          />
+          <DemoCard
+            image={BackgroundImage}
+            imageAlt={""}
+            title="Best computers"
+            description="9 Niche shop demos for online store. Super store, Fashion, Electronic, Grocery and etc"
+          />
+        </div>
+      </div>
     </div>
   );
 }
