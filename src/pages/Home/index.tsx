@@ -37,6 +37,7 @@ export function HomePage(): JSX.Element {
           </p>
         </div>
       </div>
+      {/* Third section */}
     </div>
   );
 }
