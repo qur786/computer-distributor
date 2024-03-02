@@ -2,6 +2,7 @@ import AccessoriesImage from "./accessories.svg";
 import BackgroundImage from "./computers-bg-removed.png";
 import BackgroundImage2 from "./computers-bg-removed2.png";
 import BestComputer from "./best-computer.svg";
+import CustomPC from "./custom-pc.svg";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
 import OnsiteRepair from "./onsite-repair.svg";
@@ -71,6 +72,12 @@ export function HomePage(): JSX.Element {
             imageAlt={"On-Site Repairs"}
             title="On-Site Repairs"
             description="Can't make it to our shop? No problem. We offer on-site repair services to conveniently fix your computer issues at your location."
+          />
+          <ServiceCard
+            image={CustomPC}
+            imageAlt={"Custom PC Builds"}
+            title="Custom PC Builds"
+            description="Let us tailor-make the perfect PC for your needs, whether it's for gaming, professional work, or everyday use."
           />
         </div>
       </div>
