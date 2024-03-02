@@ -4,10 +4,12 @@ import { NavLinks } from "../../components/utils";
 
 export function AboutUsPage(): JSX.Element {
   return (
-    <main className="flex flex-col gap-6 mt-8">
-      <div className="w-full self-center md:w-1/2">
-        <img src={AboutImage} alt="About us" />
-      </div>
+    <main className="flex flex-col gap-6 mt-12">
+      <img
+        src={AboutImage}
+        alt="About us"
+        className="h-[50vh] object-contain self-center"
+      />
       <div className="flex flex-col gap-4">
         <h2 className="text-xl tracking-widest text-gray-500 dark:text-white">
           ABOUT US
