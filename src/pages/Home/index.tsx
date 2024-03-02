@@ -1,7 +1,7 @@
 import BackgroundImage from "./computers-bg-removed.png";
-import BackgroundImage2 from "./computers-bg-removed2.png";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
+import SecondSectionImage from "./second-section.svg";
 import { ServiceCard } from "../../components/ServiceCard";
 import { Services } from "./services";
 
@@ -24,7 +24,7 @@ export function HomePage(): JSX.Element {
       <div className="h:screen md:h-[150vh] md:w-full w-[90%] rounded-xl bg-slate-100 dark:bg-slate-900 py-4 px-2 box-border flex flex-col md:gap-8">
         <div className="h-1/2 flex flex-col justify-center items-center">
           <img
-            src={BackgroundImage2}
+            src={SecondSectionImage}
             alt="store"
             className="h-full object-contain"
           />
