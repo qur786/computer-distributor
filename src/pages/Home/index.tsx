@@ -50,19 +50,19 @@ export function HomePage(): JSX.Element {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <ServiceCard
             image={BestComputer}
-            imageAlt={"Best computers"}
-            title="Best computers"
+            imageAlt={"Best Computers"}
+            title="Best Computers"
             description="Discover the finest selection of computers and laptops at our shop. From cutting-edge performance to sleek designs, find the perfect device to suit your needs and elevate your computing experience."
           />
           <ServiceCard
             image={RepairImage}
-            imageAlt={"Fast repair"}
-            title="Fast repair"
+            imageAlt={"Fast Repair"}
+            title="Fast Repair"
             description="Trust our skilled technicians to fix your computer issues promptly and efficiently. Get your device back up and running smoothly with our reliable repair services."
           />
           <ServiceCard
             image={AccessoriesImage}
-            imageAlt={""}
+            imageAlt={"Accessories"}
             title="Accessories"
             description="Explore our wide range of accessories, including keyboards, mouse, monitors, motherboard, HDD, SSD, printers, hedaphones, and more, to enhance your computing experience."
           />
