@@ -41,7 +41,7 @@ export function HomePage(): JSX.Element {
           </p>
         </div>
       </div>
-      {/* Third section. TODO: add different images, title and descriptions. */}
+      {/* Third section */}
       <div className="flex flex-col gap-8">
         <h2 className="text-4xl font-semibold text-center">What you get?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
