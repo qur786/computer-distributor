@@ -5,6 +5,12 @@ import { forwardRef, useImperativeHandle, useState } from "react";
 
 type NotificationVariant = "success" | "error" | "warning";
 
+type NotificationPosition =
+  | "bottom-left"
+  | "bottom-right"
+  | "top-left"
+  | "top-right";
+
 export interface NotificationRef {
   displayNotification: () => void;
   hideNotification: () => void;
@@ -14,6 +20,7 @@ export interface NotificationProps {
   title: string;
   variant?: NotificationVariant;
   timeout?: number; // In milliseconds
+  position?: NotificationPosition;
 }
 
 const NotificationColors: Record<NotificationVariant, string> = {
@@ -22,9 +29,31 @@ const NotificationColors: Record<NotificationVariant, string> = {
   warning: "#FF5630",
 };
 
+const NotificationPositions: Record<
+  NotificationPosition,
+  { hide: string; show: string }
+> = {
+  "bottom-left": {
+    hide: "-left-[1000px] bottom-10",
+    show: "left-12 bottom-10",
+  },
+  "bottom-right": {
+    hide: "-right-[1000px] bottom-10",
+    show: "right-12 bottom-10",
+  },
+  "top-left": {
+    hide: "-left-[1000px] top-10",
+    show: "left-12 top-10",
+  },
+  "top-right": {
+    hide: "-right-[1000px] top-10",
+    show: "right-12 top-10",
+  },
+};
+
 export const Notification = forwardRef<NotificationRef, NotificationProps>(
   function InnerNotification(
-    { title, variant = "success", timeout = 3000 },
+    { title, variant = "success", timeout = 3000, position = "bottom-right" },
     ref,
   ): JSX.Element {
     const [show, setShow] = useState(false);
@@ -53,8 +82,8 @@ export const Notification = forwardRef<NotificationRef, NotificationProps>(
     return (
       <div
         className={twMerge(
-          "flex flex-col gap-2 p-2 rounded-md z-50 shadow-2xl fixed bottom-10 -right-[1000px] transition-[right] duration-1000",
-          show ? "right-12" : "",
+          "flex flex-col gap-2 p-2 rounded-md z-50 shadow-2xl fixed transition-[right_left] duration-1000",
+          NotificationPositions[position][show ? "show" : "hide"],
         )}
         style={{
           backgroundColor: NotificationColors[variant],
