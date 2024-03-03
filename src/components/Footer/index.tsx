@@ -32,20 +32,20 @@ export function Footer(): JSX.Element {
                 <EnvelopeIcon className="h-4 text-green-900" />
                 <a
                   className="text-cyan-400 hover:underline"
-                  href="mailto:#"
+                  href="mailto:computterdistributer@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  abc@gmail.com
+                  computterdistributer@gmail.com
                 </a>
               </li>
               <li className="flex flex-row items-center gap-2">
                 <PhoneIcon className="h-4" />
                 <a
                   className="text-cyan-400 hover:underline"
-                  href="tel:07979785099"
+                  href="tel:9279395631"
                 >
-                  07979785099
+                  9279395631
                 </a>
               </li>
             </ul>
@@ -92,13 +92,23 @@ export function Footer(): JSX.Element {
         <a href="#" target="_blank" rel="noopener noreferrer" title="Instagram">
           <InstagramIcon className="h-5 hover:scale-125 transition-transform" />
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer" title="Whatsapp">
+        <a
+          href="https://wa.link/mvezeg"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Whatsapp"
+        >
           <WhatsappIcon className="h-5 fill-[#075E54] hover:scale-125 transition-transform" />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook">
           <FacebookIcon className="h-5 hover:scale-125 transition-transform" />
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer" title="Email">
+        <a
+          href="mailto:computterdistributer@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+        >
           <GmailIcon className="h-5 fill-[#C71610] hover:scale-125 transition-transform" />
         </a>
         <a
