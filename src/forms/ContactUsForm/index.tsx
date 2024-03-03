@@ -1,11 +1,21 @@
 import { Button } from "../../components/Button";
 import type { FormEventHandler } from "react";
 import { Input } from "../../components/Input";
+import { Notification } from "../../components/Notification";
 import { sendContactUsMessage } from "./send-email";
-import { useState } from "react";
+import type {
+  NotificationProps,
+  NotificationRef,
+} from "../../components/Notification";
+import { useRef, useState } from "react";
 
 export function ContactUsForm(): JSX.Element {
   const [loading, setLoading] = useState(false);
+  const [notification, setNotification] = useState<NotificationProps>({
+    title: "",
+  });
+
+  const notificationRef = useRef<NotificationRef>(null);
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -13,11 +23,23 @@ export function ContactUsForm(): JSX.Element {
     const form = e.currentTarget; // Needed otherwise the e.currentTarget is getting overrided with null value in async code.
     // TODO: add notification
     sendContactUsMessage("#contact-us-form")
-      .then((res) => {
-        console.log(res);
+      .then(() => {
         form.reset();
+        setNotification((prev) => ({
+          ...prev,
+          title: "Your response has successfully been sent.",
+          variant: "success",
+        }));
+        notificationRef.current?.displayNotification();
       })
-      .catch(console.log)
+      .catch(() => {
+        setNotification((prev) => ({
+          ...prev,
+          title: "Error while sending your response.",
+          variant: "error",
+        }));
+        notificationRef.current?.displayNotification();
+      })
       .finally(() => {
         setLoading(false);
       });
@@ -55,6 +77,7 @@ export function ContactUsForm(): JSX.Element {
       <Button type="submit" disabled={loading} loading={loading}>
         Submit
       </Button>
+      <Notification {...notification} ref={notificationRef} />
     </form>
   );
 }
