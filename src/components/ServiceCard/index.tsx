@@ -12,7 +12,7 @@ export function ServiceCard({
   title,
 }: ServiceCardProps): JSX.Element {
   return (
-    <div className="flex flex-row gap-2 rounded-md h-80 md:h-72 w-full shadow-md dark:bg-[#1E1E1E] box-border py-2 px-4">
+    <div className="flex flex-row gap-2 rounded-md h-96 md:h-72 w-full shadow-md dark:bg-[#1E1E1E] box-border py-2 px-4">
       <img
         src={image}
         alt={imageAlt}
