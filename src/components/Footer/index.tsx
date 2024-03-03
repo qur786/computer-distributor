@@ -1,7 +1,17 @@
+import { FacebookIcon } from "../../icons/facebook";
+import { GmailIcon } from "../../icons/gmail";
+import { InstagramIcon } from "../../icons/instagram";
 import { Link } from "react-router-dom";
 import { Logo } from "../Logo";
 import { NavLinks } from "../utils";
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { TwitterIcon } from "../../icons/twitter";
+import { WhatsappIcon } from "../../icons/whatsapp";
+import {
+  EnvelopeIcon,
+  HeartIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/solid";
 
 export function Footer(): JSX.Element {
   return (
@@ -78,9 +88,43 @@ export function Footer(): JSX.Element {
       <div className="self-center">
         <Logo />
       </div>
+      <div className="self-center flex flex-row gap-4">
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <InstagramIcon className="h-5 hover:scale-125 transition-transform" />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Whatsapp">
+          <WhatsappIcon className="h-5 fill-[#075E54] hover:scale-125 transition-transform" />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook">
+          <FacebookIcon className="h-5 hover:scale-125 transition-transform" />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Email">
+          <GmailIcon className="h-5 fill-[#C71610] hover:scale-125 transition-transform" />
+        </a>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="X(Twitter)"
+        >
+          <TwitterIcon className="h-5 fill-[#1DA1F2] hover:scale-125 transition-transform" />
+        </a>
+      </div>
       <div className="text-center">
         &copy; 2023 - Computer Distributor. All rights reserved
       </div>
+      <div className="self-center flex flex-row items-center gap-1 md:pr-4">
+        Developed with <HeartIcon className="h-4 text-pink-600" /> and Care by
+        <a
+          href="https://qur786.github.io/portfolio/"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="text-cyan-400 hover:underline"
+        >
+          Qurban
+        </a>
+      </div>
+      {/* TODO: add google reviews once the website domain is created. */}
     </footer>
   );
 }

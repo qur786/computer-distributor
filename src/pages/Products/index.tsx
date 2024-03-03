@@ -3,6 +3,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { Pagination } from "../../components/Pagination";
 import { ProductCard } from "../../components/ProductCard";
 import { Products } from "./data";
+import ProductsImage from "./products.svg";
 import { useMemo, useState } from "react";
 
 export function ProductsPage(): JSX.Element {
@@ -22,7 +23,12 @@ export function ProductsPage(): JSX.Element {
   };
 
   return (
-    <div className="mt-16 flex flex-col items-center gap-16">
+    <main className="mt-16 flex flex-col items-center gap-16">
+      <img
+        src={ProductsImage}
+        alt="About us"
+        className="h-[50vh] object-contain self-center"
+      />
       <h3 className="text-4xl text-center font-bold">
         <span className="text-red-600">Flash Deals,</span> Enjoy Upto 70%
         discounts
@@ -70,6 +76,6 @@ export function ProductsPage(): JSX.Element {
           />
         </div>
       ) : undefined}
-    </div>
+    </main>
   );
 }

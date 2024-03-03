@@ -16,6 +16,7 @@ export function ProductCard({
       <img
         src={image}
         alt={imageAlt}
+        loading="lazy"
         className="h-[80%] w-full object-cover rounded-t-md"
       />
       <h6 className="text-xl font-semibold text-center">{title}</h6>
