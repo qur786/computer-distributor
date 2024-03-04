@@ -1,9 +1,14 @@
+import { FacebookIcon } from "../../icons/facebook";
 import FirstSectionImage from "./first-section.svg";
+import { GmailIcon } from "../../icons/gmail";
+import { InstagramIcon } from "../../icons/instagram";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
 import SecondSectionImage from "./second-section.svg";
 import { ServiceCard } from "../../components/ServiceCard";
 import { Services } from "./services";
+import { TwitterIcon } from "../../icons/twitter";
+import { WhatsappIcon } from "../../icons/whatsapp";
 
 export function HomePage(): JSX.Element {
   return (
@@ -51,7 +56,7 @@ export function HomePage(): JSX.Element {
         </div>
       </div>
       {/* Fourth section */}
-      <div className="h-72 rounded-md w-full md:w-1/2 flex flex-col justify-center items-center gap-8 shadow-lg dark:bg-[#1E1E1E] p-8">
+      <div className="h-fit rounded-md w-full md:w-1/2 flex flex-col justify-center items-center gap-8 shadow-lg dark:bg-[#1E1E1E] p-8">
         <h6 className="text-4xl font-semibold text-center">
           Still have questions?
         </h6>
@@ -64,6 +69,49 @@ export function HomePage(): JSX.Element {
         >
           Contact Us
         </Link>
+        <p>Or, connect us via our social media handles</p>
+        <div className="flex flex-row gap-4">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+          >
+            <InstagramIcon className="h-5 hover:scale-125 transition-transform" />
+          </a>
+          <a
+            href="https://wa.link/mvezeg"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Whatsapp"
+          >
+            <WhatsappIcon className="h-5 fill-[#075E54] hover:scale-125 transition-transform" />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Facebook"
+          >
+            <FacebookIcon className="h-5 hover:scale-125 transition-transform" />
+          </a>
+          <a
+            href="mailto:computterdistributer@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Email"
+          >
+            <GmailIcon className="h-5 fill-[#C71610] hover:scale-125 transition-transform" />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="X(Twitter)"
+          >
+            <TwitterIcon className="h-5 fill-[#1DA1F2] hover:scale-125 transition-transform" />
+          </a>
+        </div>
       </div>
     </div>
   );
