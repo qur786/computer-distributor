@@ -31,9 +31,9 @@ export function ContactUsPage(): JSX.Element {
               <p className="font-semibold">Phone Number</p>
               <a
                 className="text-cyan-400 hover:underline"
-                href="tel:07979785099"
+                href="tel:+919279395631"
               >
-                07979785099
+                9279395631
               </a>
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -41,11 +41,11 @@ export function ContactUsPage(): JSX.Element {
               <p className="font-semibold">Email</p>
               <a
                 className="text-cyan-400 hover:underline"
-                href="mailto:#"
+                href="mailto:computterdistributer@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                abc@gmail.com
+                computterdistributer@gmail.com
               </a>
             </div>
             <div className="flex flex-col items-center gap-2">

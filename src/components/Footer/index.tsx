@@ -33,8 +33,6 @@ export function Footer(): JSX.Element {
                 <a
                   className="text-cyan-400 hover:underline"
                   href="mailto:computterdistributer@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   computterdistributer@gmail.com
                 </a>
@@ -43,7 +41,7 @@ export function Footer(): JSX.Element {
                 <PhoneIcon className="h-4" />
                 <a
                   className="text-cyan-400 hover:underline"
-                  href="tel:9279395631"
+                  href="tel:+919279395631"
                 >
                   9279395631
                 </a>
