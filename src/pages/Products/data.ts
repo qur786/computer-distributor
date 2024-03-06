@@ -1,4 +1,4 @@
-import AsusImage from "./asus-chip.jpg";
+import ASUSImage from "./asus-chip.jpg";
 import DellLaptopImage from "./dell-laptop.jpg";
 import HPLaptopImage from "./hp-laptop.jpg";
 import type { ProductCardProps } from "../../components/ProductCard";
@@ -20,10 +20,10 @@ export const Products: ProductCardProps[] = [
     imageTitle: "Image by freepik",
   },
   {
-    title: "Asus cards and laptops",
-    image: AsusImage,
-    imageAlt: "Asus",
+    title: "ASUS cards and laptops",
+    image: ASUSImage,
+    imageAlt: "ASUS",
     description:
-      "Reach out to us for best Asus products such as graphic cards, laptops and computers.",
+      "Reach out to us for best ASUS products such as graphic cards, laptops and computers.",
   },
 ];
