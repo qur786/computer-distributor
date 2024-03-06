@@ -25,14 +25,16 @@ export function ProductCard({
         className="h-[65%] w-full object-cover rounded-t-md"
       />
       <div className="my-4 mx-2 h-[35%] flex flex-col gap-2">
-        <h6 className="text-xl font-semibold text-center text-[#2F363F]">
+        <h6 className="text-xl font-semibold text-center text-[#2F363F] dark:text-slate-100">
           {title}
         </h6>
-        <p className="text-center text-slate-700 text-sm line-clamp-2">
+        <p className="text-center text-slate-700 text-sm line-clamp-2 dark:text-slate-200">
           {description}
         </p>
         {price ? (
-          <p className="text-center text-[#4C4B4B]">{price} &#8377;</p>
+          <p className="text-center text-[#4C4B4B] dark:text-slate-300">
+            {price} &#8377;
+          </p>
         ) : undefined}
       </div>
     </div>
