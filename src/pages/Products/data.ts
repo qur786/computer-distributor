@@ -1,36 +1,37 @@
-import ASUSImage from "./asus-chip.jpg";
-import CPPlusImage from "./cpplus.jpg";
-import DellLaptopImage from "./dell-laptop.jpg";
-import HPLaptopImage from "./hp-laptop.jpg";
+import CCTVImage from "./cctv.jpg";
+import DesktopImage from "./desktop.jpg";
+import GraphicsCardImage from "./graphics-card.jpg";
+import LaptopImage from "./laptop.jpg";
 import type { ProductCardProps } from "../../components/ProductCard";
 
 export const Products: ProductCardProps[] = [
   {
-    title: "Dell laptops and computers",
-    image: DellLaptopImage,
-    imageAlt: "Dell computer",
+    title: "Laptops",
+    image: LaptopImage,
+    imageAlt: "HP laptops",
     description:
-      "We have all kinds of dell computers and laptops with affordable price and best quality.",
-  },
-  {
-    title: "HP laptops and computers",
-    image: HPLaptopImage,
-    imageAlt: "HP computer",
-    description:
-      "We have all kinds of HP products, from laptops, computers to mouse and accessories.",
+      "Laptops of all brands with the best price is available to us.",
     imageTitle: "Image by freepik",
   },
   {
-    title: "ASUS cards and laptops",
-    image: ASUSImage,
-    imageAlt: "ASUS",
+    title: "Desktops",
+    image: DesktopImage,
+    imageAlt: "Desktops",
     description:
-      "Reach out to us for best ASUS products such as graphic cards, laptops and computers.",
+      "If you wanna buy full fledge PC or customized ones. We have the best in class gaming PC also.",
   },
   {
-    title: "CP Plus advanced cameras",
-    image: CPPlusImage,
+    title: "Graphics Cards",
+    image: GraphicsCardImage,
+    imageAlt: "ASUS",
+    description:
+      "Reach out to us for best graphic cards for your gaming laptops.",
+  },
+  {
+    title: "CCTV Camera",
+    image: CCTVImage,
     imageAlt: "CP Plus",
-    description: "We have the best CP Plus cctv camera available in town.",
+    description:
+      "We have the advanced and the best CCTV camera available in town.",
   },
 ];
