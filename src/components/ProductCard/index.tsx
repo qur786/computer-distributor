@@ -1,6 +1,6 @@
 export interface ProductCardProps {
   title: string;
-  price: string;
+  price?: string;
   image: string;
   imageAlt: string;
 }
@@ -19,8 +19,14 @@ export function ProductCard({
         loading="lazy"
         className="h-[80%] w-full object-cover rounded-t-md"
       />
-      <h6 className="text-xl font-semibold text-center">{title}</h6>
-      <p className="mb-4 text-center">{price} &#8377;</p>
+      <div className="my-4 h-16">
+        <h6 className="text-xl font-semibold text-center text-[#0A79DF]">
+          {title}
+        </h6>
+        {price ? (
+          <p className="text-center text-[#3498DB]">{price} &#8377;</p>
+        ) : undefined}
+      </div>
     </div>
   );
 }
