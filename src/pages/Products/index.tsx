@@ -10,7 +10,7 @@ export function ProductsPage(): JSX.Element {
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState("");
   const filteredProducts = useMemo(
-    () => Products.filter(({ title }) => new RegExp(search, "i").test(title)), // TODO: remove it and use correct data
+    () => Products.filter(({ title }) => new RegExp(search, "i").test(title)),
     [search],
   );
   const productsPerPage = window.matchMedia("(max-width: 768px)").matches
