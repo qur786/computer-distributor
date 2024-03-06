@@ -1,3 +1,4 @@
+import AccessoriesImage from "./accessories.jpg";
 import CCTVImage from "./cctv.jpg";
 import DesktopImage from "./desktop.jpg";
 import GraphicsCardImage from "./graphics-card.jpg";
@@ -41,5 +42,12 @@ export const Products: ProductCardProps[] = [
     imageAlt: "Printers",
     description:
       "Do you need color printer or laser jet printer? Cool, we have both types available in our shop.",
+  },
+  {
+    title: "Accessories",
+    image: AccessoriesImage,
+    imageAlt: "Accessories",
+    description:
+      "Apart from the complete products, we sell accessories such as hard drive, SSD, headphones, earphones, USB, keyboard, mouse and so on.",
   },
 ];
