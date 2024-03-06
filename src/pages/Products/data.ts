@@ -2,6 +2,7 @@ import CCTVImage from "./cctv.jpg";
 import DesktopImage from "./desktop.jpg";
 import GraphicsCardImage from "./graphics-card.jpg";
 import LaptopImage from "./laptop.jpg";
+import PrinterImage from "./printer.jpg";
 import type { ProductCardProps } from "../../components/ProductCard";
 
 export const Products: ProductCardProps[] = [
@@ -33,5 +34,12 @@ export const Products: ProductCardProps[] = [
     imageAlt: "CP Plus",
     description:
       "We have the advanced and the best CCTV camera available in town.",
+  },
+  {
+    title: "Printers",
+    image: PrinterImage,
+    imageAlt: "Printers",
+    description:
+      "Do you need color printer or laser jet printer? Cool, we have both types available in our shop.",
   },
 ];
