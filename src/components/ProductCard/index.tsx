@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge";
+
 export interface ProductCardProps {
   title: string;
   price?: number;
@@ -28,7 +30,12 @@ export function ProductCard({
         <h6 className="text-xl font-semibold text-center text-[#2F363F] dark:text-slate-100">
           {title}
         </h6>
-        <p className="text-center text-slate-700 text-sm line-clamp-2 dark:text-slate-200">
+        <p
+          className={twMerge(
+            "text-center text-slate-700 text-sm dark:text-slate-200",
+            price ? "line-clamp-2" : "line-clamp-3",
+          )}
+        >
           {description}
         </p>
         {price ? (
