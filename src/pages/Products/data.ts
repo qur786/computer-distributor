@@ -1,4 +1,5 @@
 import ASUSImage from "./asus-chip.jpg";
+import CPPlusImage from "./cpplus.jpg";
 import DellLaptopImage from "./dell-laptop.jpg";
 import HPLaptopImage from "./hp-laptop.jpg";
 import type { ProductCardProps } from "../../components/ProductCard";
@@ -25,5 +26,11 @@ export const Products: ProductCardProps[] = [
     imageAlt: "ASUS",
     description:
       "Reach out to us for best ASUS products such as graphic cards, laptops and computers.",
+  },
+  {
+    title: "CP Plus advanced cameras",
+    image: CPPlusImage,
+    imageAlt: "CP Plus",
+    description: "We have the best CP Plus cctv camera available in town.",
   },
 ];
