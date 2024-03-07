@@ -1,4 +1,5 @@
 import { ASUSIcon } from "../../icons/asus";
+import { CPPlusIcon } from "../../icons/cp-plus";
 import type { ChangeEventHandler } from "react";
 import { DellIcon } from "../../icons/dell";
 import { EpsonIcon } from "../../icons/epson";
@@ -49,6 +50,7 @@ export function ProductsPage(): JSX.Element {
           <DellIcon className="h-32" />
           <LenovoIcon className="h-32" />
           <EpsonIcon className="h-32" />
+          <CPPlusIcon className="h-32" />
         </div>
       </div>
       <div className="flex flex-row border rounded-xl px-4 py-2 gap-2">
