@@ -6,6 +6,7 @@ import { EpsonIcon } from "../../icons/epson";
 import { HPIcon } from "../../icons/hp";
 import { LenovoIcon } from "../../icons/lenovo";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import { MorphoIcon } from "../../icons/morpho";
 import { Pagination } from "../../components/Pagination";
 import { ProductCard } from "../../components/ProductCard";
 import { Products } from "./data";
@@ -51,6 +52,7 @@ export function ProductsPage(): JSX.Element {
           <LenovoIcon className="h-32" />
           <EpsonIcon className="h-32" />
           <CPPlusIcon className="h-32" />
+          <MorphoIcon className="h-32" />
         </div>
       </div>
       <div className="flex flex-row border rounded-xl px-4 py-2 gap-2">
