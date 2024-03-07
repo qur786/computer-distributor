@@ -6,6 +6,7 @@ import { CanonIcon } from "../../icons/canon";
 import type { ChangeEventHandler } from "react";
 import { DellIcon } from "../../icons/dell";
 import { EpsonIcon } from "../../icons/epson";
+import FrontTechImage from "./front-tech.png";
 import { HPIcon } from "../../icons/hp";
 import { LenovoIcon } from "../../icons/lenovo";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
@@ -61,6 +62,11 @@ export function ProductsPage(): JSX.Element {
           <BrotherIcon className="h-32" />
           <CanonIcon className="h-32" />
           <img src={MantraImage} alt="Mantra logo" className="mx-6" />
+          <img
+            src={FrontTechImage}
+            alt="Mantra logo"
+            className="mx-2 scale-125"
+          />
         </div>
       </div>
       <div className="flex flex-row border rounded-xl px-4 py-2 gap-2">
