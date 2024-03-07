@@ -1,5 +1,6 @@
 import FirstSectionImage from "./first-section.svg";
 import Laptop1Image from "./laptop1.png";
+import Laptop2Image from "./laptop2.png";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
 import SecondSectionImage from "./second-section.svg";
@@ -15,14 +16,14 @@ export function HomePage(): JSX.Element {
         <div className="w-full md:w-1/2">
           <h6 className="text-6xl md:mt-12 md:ml-12 font-bold text-[#212b36] dark:text-white text-center">
             Shop your new Device with{" "}
-            <span className="text-[#fa541c]">Computer Distributor</span>
+            <span className="text-orange-500">Computer Distributor</span>
           </h6>
         </div>
         <div className="w-full md:w-1/2 hidden md:block">
           <img src={FirstSectionImage} alt="store" />
         </div>
       </div>
-      <div className="h-screen w-full flex md:flex-row flex-col items-center py-4">
+      <div className="h-[80vh] w-full flex md:flex-row flex-col items-center py-4">
         <img
           src={Laptop1Image}
           alt=""
@@ -31,6 +32,15 @@ export function HomePage(): JSX.Element {
         <h6 className="text-6xl font-bold text-center">
           <span className="text-orange-500">Best laptops</span> in affordable{" "}
           <span className="text-blue-600">prices.</span>
+        </h6>
+      </div>
+      <div className="h-[80vh] w-full flex md:flex-row-reverse flex-col items-center py-4">
+        <img src={Laptop2Image} alt="" className="self-start w-full md:w-1/2" />
+        <h6 className="text-6xl font-bold text-center">
+          Step into the Future with{" "}
+          <span className="text-orange-500">
+            Our Sleek and Powerful Laptops.
+          </span>
         </h6>
       </div>
       {/* Second section */}
@@ -44,7 +54,7 @@ export function HomePage(): JSX.Element {
         </div>
         <div className="h-1/2 flex flex-col items-center justify-center gap-4">
           <p className="text-sm font-bold text-center">NEW START</p>
-          <h5 className="text-[#fa541c] font-semibold text-5xl text-center">
+          <h5 className="text-orange-500 font-semibold text-5xl text-center">
             Computer Distributor
           </h5>
           <p className="text-center">

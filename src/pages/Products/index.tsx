@@ -23,7 +23,7 @@ export function ProductsPage(): JSX.Element {
     <main className="mt-16 flex flex-col items-center gap-28">
       <div className="flex flex-col gap-4 items-center">
         <h3 className="text-4xl text-center font-bold">
-          <span className="text-[#fa541c]">Brands</span> available in our shop
+          <span className="text-orange-500">Brands</span> available in our shop
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 justify-items-center items-center">
           <HPIcon className="h-32 hover:scale-150 transition-transform" />
@@ -70,7 +70,7 @@ export function ProductsPage(): JSX.Element {
       </div>
       <div className="flex flex-col items-center gap-16">
         <h3 className="text-4xl text-center font-bold">
-          <span className="text-[#fa541c]">Flash Deals,</span> Enjoy Upto 70%
+          <span className="text-orange-500">Flash Deals,</span> Enjoy Upto 70%
           discounts
         </h3>
         <img
