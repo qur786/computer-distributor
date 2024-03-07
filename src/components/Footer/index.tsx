@@ -48,7 +48,7 @@ export function Footer(): JSX.Element {
         <div className="flex flex-col gap-4 text-center md:text-start">
           <h5 className="text-xl font-bold">Customer Service</h5>
           <p>
-            Monday to Sunday
+            7 days of the week
             <br />
             10 AM - 8 PM
           </p>
