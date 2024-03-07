@@ -1,4 +1,5 @@
 import FirstSectionImage from "./first-section.svg";
+import Laptop1Image from "./laptop1.png";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
 import SecondSectionImage from "./second-section.svg";
@@ -20,6 +21,17 @@ export function HomePage(): JSX.Element {
         <div className="w-full md:w-1/2 hidden md:block">
           <img src={FirstSectionImage} alt="store" />
         </div>
+      </div>
+      <div className="h-screen w-full flex md:flex-row flex-col items-center py-4">
+        <img
+          src={Laptop1Image}
+          alt=""
+          className="self-start w-full md:w-1/2 -scale-x-100 -z-10" // Added -z-10 to keep the image behind the header on scrolling position
+        />
+        <h6 className="text-6xl font-bold text-center">
+          <span className="text-orange-500">Best laptops</span> in affordable{" "}
+          <span className="text-blue-600">prices.</span>
+        </h6>
       </div>
       {/* Second section */}
       <div className="h:screen md:h-[150vh] md:w-full w-[90%] rounded-xl bg-slate-100 dark:bg-slate-900 py-4 px-2 box-border flex flex-col md:gap-8">
