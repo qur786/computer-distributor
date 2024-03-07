@@ -25,7 +25,7 @@ export function ProductsPage(): JSX.Element {
         <h3 className="text-4xl text-center font-bold">
           <span className="text-[#fa541c]">Brands</span> available in our shop
         </h3>
-        <div className="grid grid-cols-4 md:grid-cols-4 justify-items-center items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 justify-items-center items-center">
           <HPIcon className="h-32 hover:scale-150 transition-transform" />
           <ASUSIcon className="h-32 hover:scale-150 transition-transform" />
           <DellIcon className="h-32 hover:scale-150 transition-transform" />
