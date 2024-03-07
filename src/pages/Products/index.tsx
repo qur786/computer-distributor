@@ -1,4 +1,7 @@
+import { ASUSIcon } from "../../icons/asus";
 import type { ChangeEventHandler } from "react";
+import { DellIcon } from "../../icons/dell";
+import { HPIcon } from "../../icons/hp";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { Pagination } from "../../components/Pagination";
 import { ProductCard } from "../../components/ProductCard";
@@ -33,6 +36,17 @@ export function ProductsPage(): JSX.Element {
         <span className="text-red-600">Flash Deals,</span> Enjoy Upto 70%
         discounts
       </h3>
+      <div className="flex flex-col gap-4 items-center">
+        <h3 className="text-4xl text-center font-bold">
+          Brands available in our shop
+        </h3>
+        {/* TODO update styling */}
+        <div className="grid grid-cols-4 md:grid-cols-8">
+          <HPIcon className="h-32" />
+          <ASUSIcon className="h-32" />
+          <DellIcon className="h-32" />
+        </div>
+      </div>
       <div className="flex flex-row border rounded-xl px-4 py-2 gap-2">
         <MagnifyingGlassIcon className="h-6 text-slate-500" />
         <input
