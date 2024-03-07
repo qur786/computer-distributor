@@ -18,6 +18,7 @@ import { ProductCard } from "../../components/ProductCard";
 import { Products } from "./data";
 import ProductsImage from "./products.svg";
 import SamsungImage from "./samsung.png";
+import SonyImage from "./sony.png";
 import ZebronicsImage from "./zebronics.avif";
 import { useMemo, useState } from "react";
 
@@ -77,6 +78,7 @@ export function ProductsPage(): JSX.Element {
             className="bg-black dark:bg-transparent p-2 rounded-md"
           />
           <img src={SamsungImage} alt="Samsung logo" />
+          <img src={SonyImage} alt="Sony logo" />
         </div>
       </div>
       <div className="flex flex-row border rounded-xl px-4 py-2 gap-2">
