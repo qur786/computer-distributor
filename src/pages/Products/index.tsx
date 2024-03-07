@@ -2,6 +2,7 @@ import { ASUSIcon } from "../../icons/asus";
 import { AcerIcon } from "../../icons/acer";
 import { BrotherIcon } from "../../icons/brother";
 import { CPPlusIcon } from "../../icons/cp-plus";
+import { CanonIcon } from "../../icons/canon";
 import type { ChangeEventHandler } from "react";
 import { DellIcon } from "../../icons/dell";
 import { EpsonIcon } from "../../icons/epson";
@@ -57,6 +58,7 @@ export function ProductsPage(): JSX.Element {
           <MorphoIcon className="h-32" />
           <AcerIcon className="h-32" />
           <BrotherIcon className="h-32" />
+          <CanonIcon className="h-32" />
         </div>
       </div>
       <div className="flex flex-row border rounded-xl px-4 py-2 gap-2">
