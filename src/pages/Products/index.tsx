@@ -17,6 +17,7 @@ import { Pagination } from "../../components/Pagination";
 import { ProductCard } from "../../components/ProductCard";
 import { Products } from "./data";
 import ProductsImage from "./products.svg";
+import SamsungImage from "./samsung.png";
 import ZebronicsImage from "./zebronics.avif";
 import { useMemo, useState } from "react";
 
@@ -72,9 +73,10 @@ export function ProductsPage(): JSX.Element {
           <img src={LapcareImage} alt="Lapcare logo" />
           <img
             src={ZebronicsImage}
-            alt="Zebronics"
+            alt="Zebronics logo"
             className="bg-black dark:bg-transparent p-2 rounded-md"
           />
+          <img src={SamsungImage} alt="Samsung logo" />
         </div>
       </div>
       <div className="flex flex-row border rounded-xl px-4 py-2 gap-2">
