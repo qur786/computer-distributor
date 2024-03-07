@@ -9,6 +9,7 @@ import { EpsonIcon } from "../../icons/epson";
 import { HPIcon } from "../../icons/hp";
 import { LenovoIcon } from "../../icons/lenovo";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import MantraImage from "./mantra-logo.png";
 import { MorphoIcon } from "../../icons/morpho";
 import { Pagination } from "../../components/Pagination";
 import { ProductCard } from "../../components/ProductCard";
@@ -48,7 +49,7 @@ export function ProductsPage(): JSX.Element {
           Brands available in our shop
         </h3>
         {/* TODO update styling */}
-        <div className="grid grid-cols-4 md:grid-cols-8 gap-x-4">
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-x-4 items-center">
           <HPIcon className="h-32" />
           <ASUSIcon className="h-32" />
           <DellIcon className="h-32" />
@@ -59,6 +60,7 @@ export function ProductsPage(): JSX.Element {
           <AcerIcon className="h-32" />
           <BrotherIcon className="h-32" />
           <CanonIcon className="h-32" />
+          <img src={MantraImage} alt="Mantra logo" className="mx-6" />
         </div>
       </div>
       <div className="flex flex-row border rounded-xl px-4 py-2 gap-2">
