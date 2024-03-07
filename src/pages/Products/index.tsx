@@ -45,26 +45,46 @@ export function ProductsPage(): JSX.Element {
           <span className="text-[#fa541c]">Brands</span> available in our shop
         </h3>
         <div className="grid grid-cols-4 md:grid-cols-4 justify-items-center items-center">
-          <HPIcon className="h-32" />
-          <ASUSIcon className="h-32" />
-          <DellIcon className="h-32" />
-          <LenovoIcon className="h-32" />
-          <EpsonIcon className="h-32" />
-          <CPPlusIcon className="h-32" />
-          <MorphoIcon className="h-32" />
-          <AcerIcon className="h-32" />
-          <BrotherIcon className="h-32" />
-          <CanonIcon className="h-32" />
-          <img src={MantraImage} alt="Mantra logo" className="mx-6 h-6" />
-          <img src={FrontTechImage} alt="Frontech logo" className="mx-6 h-32" />
-          <img src={LapcareImage} alt="Lapcare logo" className="h-8" />
+          <HPIcon className="h-32 hover:scale-150 transition-transform" />
+          <ASUSIcon className="h-32 hover:scale-150 transition-transform" />
+          <DellIcon className="h-32 hover:scale-150 transition-transform" />
+          <LenovoIcon className="h-32 hover:scale-150 transition-transform" />
+          <EpsonIcon className="h-32 hover:scale-150 transition-transform" />
+          <CPPlusIcon className="h-32 hover:scale-150 transition-transform" />
+          <MorphoIcon className="h-32 hover:scale-150 transition-transform" />
+          <AcerIcon className="h-32 hover:scale-150 transition-transform" />
+          <BrotherIcon className="h-32 hover:scale-150 transition-transform" />
+          <CanonIcon className="h-32 hover:scale-150 transition-transform" />
+          <img
+            src={MantraImage}
+            alt="Mantra logo"
+            className="mx-6 h-6 hover:scale-150 transition-transform"
+          />
+          <img
+            src={FrontTechImage}
+            alt="Frontech logo"
+            className="mx-6 h-32 hover:scale-150 transition-transform"
+          />
+          <img
+            src={LapcareImage}
+            alt="Lapcare logo"
+            className="h-8 hover:scale-150 transition-transform"
+          />
           <img
             src={ZebronicsImage}
             alt="Zebronics logo"
-            className="bg-black dark:bg-transparent p-2 rounded-md h-8"
+            className="bg-black dark:bg-transparent p-2 rounded-md h-8 hover:scale-150 transition-transform"
           />
-          <img src={SamsungImage} alt="Samsung logo" className="h-8" />
-          <img src={SonyImage} alt="Sony logo" className="h-16" />
+          <img
+            src={SamsungImage}
+            alt="Samsung logo"
+            className="h-8 hover:scale-150 transition-transform"
+          />
+          <img
+            src={SonyImage}
+            alt="Sony logo"
+            className="h-16 hover:scale-150 transition-transform"
+          />
         </div>
       </div>
       <div className="flex flex-col items-center gap-16">
