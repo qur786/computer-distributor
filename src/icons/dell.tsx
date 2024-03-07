@@ -1,6 +1,6 @@
 import type { IconProps } from "./utils";
 
-export function DellIcon({ className }: IconProps) {
+export function DellIcon({ className }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

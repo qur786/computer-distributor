@@ -2,6 +2,7 @@ import { ASUSIcon } from "../../icons/asus";
 import type { ChangeEventHandler } from "react";
 import { DellIcon } from "../../icons/dell";
 import { HPIcon } from "../../icons/hp";
+import { LenovoIcon } from "../../icons/lenovo";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { Pagination } from "../../components/Pagination";
 import { ProductCard } from "../../components/ProductCard";
@@ -45,6 +46,7 @@ export function ProductsPage(): JSX.Element {
           <HPIcon className="h-32" />
           <ASUSIcon className="h-32" />
           <DellIcon className="h-32" />
+          <LenovoIcon className="h-32" />
         </div>
       </div>
       <div className="flex flex-row border rounded-xl px-4 py-2 gap-2">
