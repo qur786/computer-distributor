@@ -1,12 +1,18 @@
 import FirstSectionImage from "./first-section.svg";
 import Laptop1Image from "./laptop1.png";
 import Laptop2Image from "./laptop2.png";
+import LegionImage from "./legion1.png";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
+import Rog1Image from "./rog1.png";
+import Rog2Image from "./rog2.png";
 import SecondSectionImage from "./second-section.svg";
 import { ServiceCard } from "../../components/ServiceCard";
 import { Services } from "./services";
 import { SocialMediaLinks } from "../../components/SocialMediaLinks";
+import Tuf1Image from "./tuf1.png";
+import Tuf2Image from "./tuf2.png";
+import VictusImage from "./victus.png";
 
 export function HomePage(): JSX.Element {
   return (
@@ -42,6 +48,38 @@ export function HomePage(): JSX.Element {
             Our Sleek and Powerful Laptops.
           </span>
         </h6>
+      </div>
+      <div className="w-full flex flex-row items-center overflow-x-auto">
+        <img
+          src={Rog1Image}
+          alt=""
+          className="h-72 aspect-square object-contain"
+        />
+        <img
+          src={Rog2Image}
+          alt=""
+          className="h-72 aspect-square object-contain"
+        />
+        <img
+          src={Tuf1Image}
+          alt=""
+          className="h-96 aspect-square object-contain"
+        />
+        <img
+          src={Tuf2Image}
+          alt=""
+          className="h-60 aspect-square object-contain"
+        />
+        <img
+          src={LegionImage}
+          alt=""
+          className="h-72 aspect-square object-contain"
+        />
+        <img
+          src={VictusImage}
+          alt=""
+          className="h-96 aspect-square object-contain"
+        />
       </div>
       {/* Second section */}
       <div className="h:screen md:h-[150vh] md:w-full w-[90%] rounded-xl bg-slate-100 dark:bg-slate-900 py-4 px-2 box-border flex flex-col md:gap-8">
