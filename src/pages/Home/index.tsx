@@ -58,9 +58,9 @@ export function HomePage(): JSX.Element {
             Computer Distributor
           </h5>
           <p className="text-center">
-            Modern ui kit to save your time, boost your creativity.
+            Modern gadgests specifically for your needs, boost your creativity.
             <br />
-            Neat and super stylish layout ready to help with your projects
+            Neat and super stylish gadgets ready for your work and games.
           </p>
         </div>
       </div>
