@@ -34,7 +34,7 @@ export function HomePage(): JSX.Element {
           <span className="text-blue-600">prices.</span>
         </h6>
       </div>
-      <div className="h-[80vh] w-full flex md:flex-row-reverse flex-col items-center py-4">
+      <div className="h-screen w-full flex md:flex-row-reverse flex-col items-center py-4">
         <img src={Laptop2Image} alt="" className="self-start w-full md:w-1/2" />
         <h6 className="text-6xl font-bold text-center">
           Step into the Future with{" "}
