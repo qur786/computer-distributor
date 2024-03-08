@@ -58,7 +58,7 @@ export function HomePage(): JSX.Element {
             Computer Distributor
           </h5>
           <p className="text-center">
-            Modern gadgests specifically for your needs, boost your creativity.
+            Modern gadgets specifically for your needs, boost your creativity.
             <br />
             Neat and super stylish gadgets ready for your work and games.
           </p>
