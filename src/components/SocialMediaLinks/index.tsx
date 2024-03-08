@@ -1,14 +1,19 @@
 import { FacebookIcon } from "../../icons/facebook";
 import { GmailIcon } from "../../icons/gmail";
 import { InstagramIcon } from "../../icons/instagram";
+import type { MouseEventHandler } from "react";
 import { TwitterIcon } from "../../icons/twitter";
 import { WhatsappIcon } from "../../icons/whatsapp";
 
 export function SocialMediaLinks(): JSX.Element {
+  const handleDisabledLink: MouseEventHandler<HTMLAnchorElement> = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="self-center flex flex-row gap-4">
       <a
-        href="javascript:void(0)"
+        href="#"
+        onClick={handleDisabledLink}
         title="Instagram"
         className="hover:cursor-not-allowed"
       >
@@ -23,7 +28,8 @@ export function SocialMediaLinks(): JSX.Element {
         <WhatsappIcon className="h-5 fill-[#075E54] hover:scale-125 transition-transform" />
       </a>
       <a
-        href="javascript:void(0)"
+        href="#"
+        onClick={handleDisabledLink}
         title="Facebook"
         className="hover:cursor-not-allowed"
       >
@@ -38,7 +44,8 @@ export function SocialMediaLinks(): JSX.Element {
         <GmailIcon className="h-5 fill-[#C71610] hover:scale-125 transition-transform" />
       </a>
       <a
-        href="javascript:void(0)"
+        href="#"
+        onClick={handleDisabledLink}
         title="X(Twitter)"
         className="hover:cursor-not-allowed"
       >
