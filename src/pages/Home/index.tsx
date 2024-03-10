@@ -13,8 +13,35 @@ import { SocialMediaLinks } from "../../components/SocialMediaLinks";
 import Tuf1Image from "./tuf1.png";
 import Tuf2Image from "./tuf2.png";
 import VictusImage from "./victus.png";
+import { useEffect } from "react";
 
 export function HomePage(): JSX.Element {
+  useEffect(() => {
+    const scrollEventListener = () => {
+      const sticky = document.getElementById("sticky") as HTMLDivElement;
+      const offsetTop = sticky.parentElement?.offsetTop ?? 0;
+      const scrollSection = document.getElementById(
+        "scroll-section",
+      ) as HTMLDivElement;
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+      const maxPercentage = isMobile ? 500 : 400;
+      let percentage =
+        ((window.scrollY - offsetTop) / window.innerHeight) * 100;
+      percentage =
+        percentage < 0
+          ? 0
+          : percentage > maxPercentage
+            ? maxPercentage
+            : percentage;
+      scrollSection.style.transform = `translate3d(${-percentage}vw, 0, 0)`;
+    };
+
+    window.addEventListener("scroll", scrollEventListener);
+
+    return () => {
+      window.removeEventListener("scroll", scrollEventListener);
+    };
+  }, []);
   return (
     <div className="flex flex-col items-center gap-16">
       {/* First section */}
@@ -49,37 +76,47 @@ export function HomePage(): JSX.Element {
           </span>
         </h6>
       </div>
-      <div className="w-full flex flex-row items-center overflow-x-auto">
-        <img
-          src={Rog1Image}
-          alt=""
-          className="h-72 aspect-square object-contain"
-        />
-        <img
-          src={Rog2Image}
-          alt=""
-          className="h-72 aspect-square object-contain"
-        />
-        <img
-          src={Tuf1Image}
-          alt=""
-          className="h-96 aspect-square object-contain"
-        />
-        <img
-          src={Tuf2Image}
-          alt=""
-          className="h-60 aspect-square object-contain"
-        />
-        <img
-          src={LegionImage}
-          alt=""
-          className="h-72 aspect-square object-contain"
-        />
-        <img
-          src={VictusImage}
-          alt=""
-          className="h-96 aspect-square object-contain"
-        />
+      <div
+        className="h-[600vh] md:h-[500vh] w-full -z-10"
+        id="sticky-container"
+      >
+        <div className="overflow-hidden sticky top-24 h-[80vh]" id="sticky">
+          <div
+            id="scroll-section"
+            className="absolute gap-4 md:gap-0 top-0 snap-x md:pr-72 h-full w-[600vw] md:w-[500vw] will-change-transform flex flex-row justify-start items-center"
+          >
+            <img
+              src={Rog1Image}
+              alt=""
+              className="md:h-72 h-56 w-screen object-contain object-center"
+            />
+            <img
+              src={Rog2Image}
+              alt=""
+              className="md:h-72 h-56 w-screen object-contain object-center"
+            />
+            <img
+              src={Tuf1Image}
+              alt=""
+              className="md:h-96 h-56 w-screen object-contain object-center"
+            />
+            <img
+              src={Tuf2Image}
+              alt=""
+              className="md:h-72 h-56 w-screen object-contain object-center"
+            />
+            <img
+              src={LegionImage}
+              alt=""
+              className="md:h-96 h-56 w-screen object-contain object-center"
+            />
+            <img
+              src={VictusImage}
+              alt=""
+              className="w-[600px] h-[80%] object-contain object-center"
+            />
+          </div>
+        </div>
       </div>
       {/* Second section */}
       <div className="h:screen md:h-[150vh] md:w-full w-[90%] rounded-xl bg-slate-100 dark:bg-slate-900 py-4 px-2 box-border flex flex-col md:gap-8">
