@@ -1,7 +1,7 @@
 import FirstSectionImage from "./first-section.svg";
 import Laptop1Image from "./laptop1.png";
 import Laptop2Image from "./laptop2.png";
-import LegionImage from "./legion1.png";
+import LegionImage from "./legion1.avif";
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../components/utils";
 import Rog1Image from "./rog1.png";
@@ -11,7 +11,7 @@ import { ServiceCard } from "../../components/ServiceCard";
 import { Services } from "./services";
 import { SocialMediaLinks } from "../../components/SocialMediaLinks";
 import Tuf1Image from "./tuf1.png";
-import Tuf2Image from "./tuf2.png";
+import Tuf2Image from "./tuf2.jpg";
 import VictusImage from "./victus.png";
 import { useEffect } from "react";
 
@@ -98,12 +98,12 @@ export function HomePage(): JSX.Element {
             <img
               src={Tuf1Image}
               alt=""
-              className="md:h-96 h-56 w-screen object-contain object-center"
+              className="md:h-80 h-56 w-screen object-contain object-center"
             />
             <img
               src={Tuf2Image}
               alt=""
-              className="md:h-72 h-56 w-screen object-contain object-center"
+              className="md:h-96 h-56 w-screen object-contain object-center"
             />
             <img
               src={LegionImage}
@@ -113,7 +113,7 @@ export function HomePage(): JSX.Element {
             <img
               src={VictusImage}
               alt=""
-              className="w-[600px] h-[80%] object-contain object-center"
+              className="md:h-96 h-56 w-screen object-contain object-center"
             />
           </div>
         </div>
