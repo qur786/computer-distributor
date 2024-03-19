@@ -23,7 +23,7 @@ export function App(): JSX.Element {
         </Suspense>
       </main>
       <Footer />
-      <ScrollIndicator />
+      <ScrollIndicator className="z-20" />
     </div>
   );
 }

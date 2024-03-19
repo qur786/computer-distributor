@@ -1,6 +1,11 @@
+import { twMerge } from "tailwind-merge";
 import { useEffect, useMemo, useState } from "react";
 
-export function ScrollIndicator(): JSX.Element {
+export function ScrollIndicator({
+  className,
+}: {
+  className?: string;
+}): JSX.Element {
   const [yPosition, setYPosition] = useState(() => {
     return window.scrollY;
   });
@@ -29,7 +34,7 @@ export function ScrollIndicator(): JSX.Element {
     };
   }, []);
   return (
-    <div className="fixed top-0 w-full h-[3px]">
+    <div className={twMerge("fixed top-0 w-full h-[3px]", className)}>
       <div
         className="bg-[#fa541c] h-full rounded-lg"
         style={{
