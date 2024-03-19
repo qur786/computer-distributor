@@ -1,9 +1,9 @@
 import { sendForm } from "@emailjs/browser";
 
 const EmailJS = {
-  serviceID: "service_65rhxfl",
-  templateID: "template_3r9yy7s",
-  publicKey: "7gN_gfh4gzeFqVDUK",
+  serviceID: "service_nqufy2e",
+  templateID: "template_jmo1rxe",
+  publicKey: "M6EQqEF47_57zi8fM",
 } as const;
 
 export async function sendContactUsMessage(
