@@ -11,7 +11,7 @@ import { ServiceCard } from "../../components/ServiceCard";
 import { Services } from "./services";
 import { SocialMediaLinks } from "../../components/SocialMediaLinks";
 import Tuf1Image from "./tuf1.png";
-import Tuf2Image from "./tuf2.jpg";
+import Tuf2Image from "./tuf2.png";
 import VictusImage from "./victus.png";
 import { useEffect } from "react";
 
@@ -60,7 +60,7 @@ export function HomePage(): JSX.Element {
         <img
           src={Laptop1Image}
           alt=""
-          className="self-start w-full md:w-1/2 -scale-x-100 -z-10" // Added -z-10 to keep the image behind the header on scrolling position
+          className="self-start w-full md:w-1/2 -scale-x-100" // Added -z-10 to keep the image behind the header on scrolling position
         />
         <h6 className="text-6xl font-bold text-center">
           <span className="text-orange-500">Best laptops</span> in affordable{" "}
@@ -76,10 +76,7 @@ export function HomePage(): JSX.Element {
           </span>
         </h6>
       </div>
-      <div
-        className="h-[600vh] md:h-[500vh] w-full -z-10"
-        id="sticky-container"
-      >
+      <div className="h-[600vh] md:h-[500vh] w-full" id="sticky-container">
         <div className="overflow-hidden sticky top-24 h-[80vh]" id="sticky">
           <div
             id="scroll-section"

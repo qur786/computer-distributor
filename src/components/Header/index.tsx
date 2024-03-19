@@ -22,7 +22,7 @@ export function Header(): JSX.Element {
 
   return (
     <>
-      <header className="fixed w-full p-4 dark:text-white backdrop-blur-sm shadow-lg flex items-center justify-between">
+      <header className="fixed w-full p-4 dark:text-white backdrop-blur-sm shadow-lg flex items-center justify-between z-20">
         <Logo />
         <nav className="hidden gap-8 md:flex">
           {Object.entries(NavLinks).map(([title, link]) => (
