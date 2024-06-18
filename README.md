@@ -1,3 +1,3 @@
 # Computer Distributor
 
-An web app for a local client.
+A web app for a local client.
