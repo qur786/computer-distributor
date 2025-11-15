@@ -1,8 +1,3 @@
-# react vite template
+# Computer Distributor
 
-- [x] React
-- [x] Typescript
-- [x] ESLint
-- [x] Prettier
-- [x] Tailwind CSS
-- [x] shx
+A web app for a local client.
