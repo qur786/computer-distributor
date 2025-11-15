@@ -44,9 +44,9 @@ export function HomePage(): JSX.Element {
     };
   }, []);
   return (
-    <div className="flex flex-col items-center gap-16">
+    <div className={`flex flex-col items-center gap-16`}>
       {/* First section */}
-      <div className="h-screen w-full flex items-center justify-center flex-col-reverse md:flex-row">
+      <div className="min-h-screen w-full flex items-center justify-center flex-col-reverse md:flex-row">
         <div className="w-full md:w-1/2">
           <h6 className="text-6xl md:mt-12 md:ml-12 font-bold text-[#212b36] dark:text-white text-center">
             Shop your new Device with{" "}
@@ -57,7 +57,7 @@ export function HomePage(): JSX.Element {
           <img src={FirstSectionImage} alt="store" />
         </div>
       </div>
-      <div className="h-[80vh] w-full flex md:flex-row flex-col items-center py-4">
+      <div className="min-h-screen w-full flex md:flex-row flex-col items-center py-4">
         <img
           src={Laptop1Image}
           alt=""
@@ -68,7 +68,7 @@ export function HomePage(): JSX.Element {
           <span className="text-blue-600">prices.</span>
         </h6>
       </div>
-      <div className="h-screen w-full flex md:flex-row-reverse flex-col items-center py-4">
+      <div className="min-h-screen w-full flex md:flex-row-reverse flex-col items-center py-4">
         <img src={Laptop2Image} alt="" className="self-start w-full md:w-1/2" />
         <h6 className="text-6xl font-bold text-center">
           Step into the Future with{" "}
@@ -77,7 +77,9 @@ export function HomePage(): JSX.Element {
           </span>
         </h6>
       </div>
-      <Brands />
+      <div className="min-h-screen w-full py-4">
+        <Brands />
+      </div>
       <div className="h-[600vh] md:h-[500vh] w-full" id="sticky-container">
         <div className="overflow-hidden sticky top-24 h-[80vh]" id="sticky">
           <div
