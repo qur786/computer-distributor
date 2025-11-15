@@ -1,3 +1,5 @@
+import BackgroundImage from "./background-2.svg";
+import DarkBackgroundImage from "./dark-bg.jpg";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { LoadingOverlay } from "./components/LoadingOverlay";
@@ -15,7 +17,12 @@ export function App(): JSX.Element {
   }, [location.pathname]);
 
   return (
-    <div className="font-barlow flex flex-col items-center gap-8 dark:bg-[#121212] dark:text-white">
+    <div
+      className="font-barlow flex flex-col items-center gap-8 dark:bg-[#121212] dark:text-white"
+      style={{
+        backgroundImage: `url(${theme === "dark" ? DarkBackgroundImage : BackgroundImage})`,
+      }}
+    >
       <Header />
       <main className="container min-h-screen mt-12 md:px-0 px-4">
         <Suspense fallback={<LoadingOverlay theme={theme} />}>

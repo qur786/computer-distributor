@@ -3,6 +3,7 @@ import { AcerIcon } from "../../icons/acer";
 import { BrotherIcon } from "../../icons/brother";
 import { CPPlusIcon } from "../../icons/cp-plus";
 import { CanonIcon } from "../../icons/canon";
+import DarkSonyImage from "./sony-dark-mode-logo.png";
 import { DellIcon } from "../../icons/dell";
 import { EpsonIcon } from "../../icons/epson";
 import FrontTechImage from "./front-tech.png";
@@ -14,8 +15,10 @@ import { MorphoIcon } from "../../icons/morpho";
 import SamsungImage from "./samsung.png";
 import SonyImage from "./sony.png";
 import ZebronicsImage from "./zebronics.avif";
+import { useTheme } from "../../hooks/theme";
 
 export function Brands() {
+  const { theme } = useTheme();
   return (
     <div className="flex flex-col gap-4 items-center">
       <h3 className="text-4xl text-center font-bold">
@@ -69,7 +72,7 @@ export function Brands() {
         </div>
         <div className="h-32 flex flex-col justify-center">
           <img
-            src={SonyImage}
+            src={theme === "dark" ? DarkSonyImage : SonyImage}
             alt="Sony logo"
             className="h-16 hover:scale-150 transition-transform"
           />

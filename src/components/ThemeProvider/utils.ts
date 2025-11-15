@@ -7,7 +7,9 @@ function getStoredTheme(): Theme | null {
 }
 
 function getNativeTheme(): Theme {
-  return document.documentElement.classList.contains("dark") ? "dark" : "light";
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
 }
 
 export function getTheme(): Theme {
