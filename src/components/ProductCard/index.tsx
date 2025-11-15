@@ -22,7 +22,6 @@ export function ProductCard({
       <img
         src={image}
         alt={imageAlt}
-        loading="lazy"
         title={imageTitle}
         className="h-64 w-full object-cover rounded-t-md"
       />
