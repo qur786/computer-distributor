@@ -77,6 +77,7 @@ export function HomePage(): JSX.Element {
           </span>
         </h6>
       </div>
+      <Brands />
       <div className="h-[600vh] md:h-[500vh] w-full" id="sticky-container">
         <div className="overflow-hidden sticky top-24 h-[80vh]" id="sticky">
           <div
@@ -117,8 +118,6 @@ export function HomePage(): JSX.Element {
         </div>
       </div>
       {/* Second section */}
-      <Brands />
-      {/* Third section */}
       <div className="h:screen md:h-[150vh] md:w-full w-[90%] rounded-xl bg-slate-100 dark:bg-slate-900 py-4 px-2 box-border flex flex-col md:gap-8">
         <div className="h-1/2 flex flex-col justify-center items-center">
           <img
