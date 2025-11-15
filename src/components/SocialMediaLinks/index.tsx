@@ -36,7 +36,7 @@ export function SocialMediaLinks(): JSX.Element {
         <FacebookIcon className="h-5 hover:scale-125 transition-transform" />
       </a> */}
       <a
-        href="mailto:computerdistributer@gmail.com"
+        href="mailto:computerdistributor@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
         title="Email"

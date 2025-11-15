@@ -28,9 +28,9 @@ export function Footer(): JSX.Element {
                 <EnvelopeIcon className="h-4 text-green-900" />
                 <a
                   className="text-cyan-400 hover:underline"
-                  href="mailto:computerdistributer@gmail.com"
+                  href="mailto:computerdistributor@gmail.com"
                 >
-                  computerdistributer@gmail.com
+                  computerdistributor@gmail.com
                 </a>
               </li>
               <li className="flex flex-row items-center gap-2">

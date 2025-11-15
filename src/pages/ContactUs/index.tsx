@@ -41,11 +41,11 @@ export function ContactUsPage(): JSX.Element {
               <p className="font-semibold">Email</p>
               <a
                 className="text-cyan-400 hover:underline"
-                href="mailto:computerdistributer@gmail.com"
+                href="mailto:computerdistributor@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                computerdistributer@gmail.com
+                computerdistributor@gmail.com
               </a>
             </div>
             <div className="flex flex-col items-center gap-2">
