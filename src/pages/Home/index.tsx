@@ -1,3 +1,4 @@
+import { Brands } from "../../components/Brands";
 import FirstSectionImage from "./first-section.svg";
 import Laptop1Image from "./laptop1.png";
 import Laptop2Image from "./laptop2.png";
@@ -116,6 +117,8 @@ export function HomePage(): JSX.Element {
         </div>
       </div>
       {/* Second section */}
+      <Brands />
+      {/* Third section */}
       <div className="h:screen md:h-[150vh] md:w-full w-[90%] rounded-xl bg-slate-100 dark:bg-slate-900 py-4 px-2 box-border flex flex-col md:gap-8">
         <div className="h-1/2 flex flex-col justify-center items-center">
           <img
@@ -136,7 +139,7 @@ export function HomePage(): JSX.Element {
           </p>
         </div>
       </div>
-      {/* Third section */}
+      {/* Forth section */}
       <div className="flex flex-col gap-8">
         <h2 className="text-4xl font-semibold text-center">What you get?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -145,7 +148,7 @@ export function HomePage(): JSX.Element {
           ))}
         </div>
       </div>
-      {/* Fourth section */}
+      {/* Fifth section */}
       <div className="h-fit rounded-md w-full md:w-1/2 flex flex-col justify-center items-center gap-8 shadow-lg dark:bg-[#1E1E1E] p-8">
         <h6 className="text-4xl font-semibold text-center">
           Still have questions?
